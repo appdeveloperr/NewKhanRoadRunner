@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">New Khan Road Runners</string>
+
+    <string name="lbl_date_time">تاریخ / وقت</string>
+    <string name="lbl_select_source_station">ابتدائی سٹاپ</string>
+    <string name="lbl_select_dest_station">منزل مقصود سٹاپ</string>
+    <string name="lbl_fare">کرایہ</string>
+    <string name="lbl_numbers_of_tickets">تعداد ٹکٹ</string>
+    <string name="lbl_total_amount">کل رقم</string>
+    <string name="lbl_discount">رعائت</string>
+    <string name="lbl_cash_received">رقم وصول</string>
+    <string name="lbl_print">Print</string>
+    <string name="lbl_cancel">منقطع</string>
+    <string name="lbl_expense_type">خرچہ کی قسم</string>
+    <string name="lbl_select_station">سٹاپ</string>
+    <string name="lbl_expense_description">خرچہ کی تفصیل</string>
+    <string name="lbl_expense_amount">خرچہ کی رقم</string>
+    <string name="lbl_reset">Reset</string>
+    <string name="lbl_ticketing_screen">ٹکٹنگ سکرین</string>
+    <string name="lbl_expense_screen">خرچہ اندراج</string>
+    <string name="lbl_ticketing">ٹکٹ</string>
+
+    <!--Drawer Strings-->
+    <string name="title_activity_main_drawer">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_service_type_title">Service Type: </string>
+    <string name="nav_user_title">UserName: </string>
+    <string name="nav_route_title">RouteName: </string>
+    <string name="nav_source_title">Source: </string>
+    <string name="nav_source_desc">Source</string>
+    <string name="nav_dest_title">Destination: </string>
+    <string name="nav_sched_title">Schedule Title: </string>
+    <string name="nav_dest_desc">Destination</string>
+    <string name="nav_dept_time_title">Departure DateTime: </string>
+    <string name="nav_dept_time_desc">Departure Time</string>
+    <string name="nav_vehicle_no_title">Vehicle No: </string>
+    <string name="nav_voucher_no_title">Voucher No: </string>
+    <string name="nav_vehicle_no_desc">Vehicle</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_connect_server">Connect Server</string>
+    <string name="action_upload_data">Upload Data</string>
+    <string name="action_delete_data">Delete Data</string>
+    <string name="server_url">66.70.142.77\Baloch</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <!--Drawer Strings End-->
+
+    <!--Printer Strings-->
+    <string name="hello_world">Hello world!</string>
+
+    <string name="text_bluetooth_off">Bluetooth is Off</string>
+    <string name="text_bluetooth_on">Bluetooth is On</string>
+    text_scan_devices
+    <string name="text_connect">Connect</string>
+    <string name="text_disconnect">Diconnect</string>
+
+    <string name="text_enable_bluetooth">Enable Bluetooth</string>
+    <string name="text_disable_bluetooth">Disable Bluetooth</string>
+
+    <string name="text_scan_devices">Scan Devices</string>
+    <string name="text_stop_scan">Scan Devices</string>
+
+    <string name="text_list_paired_devices">Paired Devices</string>
+    <string name="text_list_devices">List of Devices</string>
+
+    <string name="text_pair">Pair</string>
+
+
+    <string name="text_print_demo">Print Demo</string>
+    <string name="text_print_barcode">Print Barcode</string>
+    <string name="text_print_image">Print Image</string>
+    <string name="text_print_receipt">Print Receipt</string>
+    <string name="text_print_text">Print Text</string>
+    <!--End-->
+
+    <!--Messages-->
+    <string name="msg_no_internet">No internet connection. Check your internet connection and try again.</string>
+    <string name="msg_zero_record">No of record found in server are zero. </string>
+    <!--End-->
+
+</resources>

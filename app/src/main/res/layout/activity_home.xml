@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.husnain.newproject.HomeActivity">
+
+    <!--<Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:id="@+id/mytoolbar"-->
+        <!--tools:targetApi="lollipop">-->
+
+    <!--</Toolbar>-->
+
+    <!--***********************************************City From************************************************************-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/From"
+        android:background="#ffffff"
+        android:onClick="SelectCityFrom"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:id="@+id/from"
+            android:text="Travel From" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/city"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/from"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CityFrom"
+            android:layout_toEndOf="@+id/from"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="Enter City"
+            android:text="Enter City"
+            android:textSize="20dp"
+
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/Error"
+            android:layout_toEndOf="@+id/CityFrom"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/error"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+<!--***********************************************City To************************************************************-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/To"
+        android:layout_below="@+id/From"
+        android:background="#ffffff"
+        android:onClick="SelectCityTo"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:id="@+id/to"
+            android:text="Travel To" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/city"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/to"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CityTo"
+            android:layout_toEndOf="@+id/to"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="Enter City"
+            android:text="Enter City"
+            android:textSize="20dp"
+
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/Error1"
+            android:layout_toEndOf="@+id/CityTo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/error"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:hint="Select City..."-->
+        <!--android:id="@+id/CityFrom"-->
+        <!--android:editable="false"-->
+        <!--android:onClick="SelectCityFrom"-->
+        <!--android:background="@drawable/item_rounded_bg"-->
+        <!--android:layout_below="@+id/from"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/to"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_below="@+id/CityFrom"-->
+        <!--android:text="Trevel To:" />-->
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:hint="Select City..."-->
+        <!--android:onClick="SelectCityTo"-->
+        <!--android:editable="false"-->
+        <!--android:id="@+id/CityTo"-->
+        <!--android:background="@drawable/item_rounded_bg"-->
+        <!--android:layout_below="@+id/to"-->
+        <!--/>-->
+
+    <!--**************************************************Date******************************************************-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dat"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/To"
+        android:text="Select Date:" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/dat"
+        android:id="@+id/Datelayout"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:onClick="setDate"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/j_dat"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Journey Date"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:id="@+id/dateImage"
+            android:src="@drawable/calender"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_toEndOf="@+id/dateImage"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:id="@+id/day"
+            android:textSize="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MonthDay"
+            android:layout_below="@+id/j_dat"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/day"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/DayofWeek"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Month"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:layout_marginTop="20dp"
+            android:textSize="32dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_toEndOf="@+id/day"
+            android:layout_marginLeft="170dp"
+            android:id="@+id/today"
+            />
+
+    </RelativeLayout>
+
+    <!--<DatePicker-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_below="@+id/CityTo"-->
+        <!--android:id="@+id/SelectDate"-->
+        <!--&gt;-->
+
+    <!--</DatePicker>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/right_arrow"
+        android:layout_margin="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/Datelayout"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--***************************************************Fotter********************************************************-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fotter"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:id="@+id/Homelayout"
+            android:onClick="Home"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/Home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:id="@+id/HomeText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/Home"
+                android:textColor="@color/colorAccent"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/MyBookinglayout"
+            android:layout_marginLeft="25dp"
+            android:layout_toEndOf="@+id/Homelayout"
+            android:onClick="My_Booking"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/MyBooking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/list"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Booking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/MyBooking"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Helplayout"
+            android:layout_marginLeft="25dp"
+            android:layout_toEndOf="@+id/MyBookinglayout"
+            android:onClick="Help"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/Help"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/help"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/Help"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Accountlayout"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/Helplayout"
+            android:onClick="My_Account"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/Account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/my_account"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/Account"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--***************************************************Fotter********************************************************-->
+
+</RelativeLayout>

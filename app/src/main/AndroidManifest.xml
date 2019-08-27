@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.husnain.newproject">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".Global"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_newkhan"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.InfoActivity"></activity>
+        <activity
+            android:name=".activities.SystemConfigActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activities.SelectCityActivity" />
+        <activity
+            android:name=".activities.MainDrawerActivity"
+            android:label="@string/title_activity_main_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.TicketingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.DataSyncingActivity" /> <!-- <activity android:name=".SplashActivity" android:theme="@style/Theme.Design.NoActionBar"> -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Connect Printer"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".PrintPakage.PrintTicketActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectCity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".MyAccount" />
+        <activity android:name=".MyBooking" />
+        <activity android:name=".Help" />
+        <activity android:name=".Schedule" />
+        <activity android:name=".SelectSeats" />
+        <activity android:name=".UpdateSeats" />
+        <activity android:name=".Preference_For_Schedule" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+    </application>
+
+</manifest>

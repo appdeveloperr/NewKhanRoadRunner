@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="SORT BY"
+            android:textColor="@color/bpblack"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/SB"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+        <!--********************************************* Sort Preference *********************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/SB"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:id="@+id/SP"
+            >
+<!--********************************************************* Departure Time Sorting*****************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:id="@+id/DS"
+                android:layout_marginLeft="2dp"
+                android:background="@color/bpWhite"
+                android:onClick="Departure_Sorting"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/time"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/s1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DST"
+                    android:text="Departure"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/s1"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+<!--**********************************************************Fare Sorting *************************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:id="@+id/FS"
+                android:layout_marginLeft="3dp"
+                android:background="@color/bpWhite"
+                android:layout_toRightOf="@+id/DS"
+                android:onClick="Fare_Sorting"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/money"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/s2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fare"
+                    android:id="@+id/FST"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/s2"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+<!--**************************************************** AC/NonAC Preferences (Bus Type)******************************************-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/SP"
+            android:text="Bus Type"
+            android:textColor="@color/bpblack"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/Type"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Type"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            >
+            <!--********************************************************* Bussiness Type*****************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:id="@+id/BT"
+                android:layout_marginLeft="2dp"
+                android:background="@color/bpWhite"
+                android:onClick="Business_Type"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business"
+                    android:id="@+id/BTT"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+            <!--**********************************************************Economy Type *************************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ET"
+                android:layout_marginLeft="3dp"
+                android:background="@color/bpWhite"
+                android:layout_toRightOf="@+id/BT"
+                android:onClick="Economy_Type"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Economy"
+                    android:id="@+id/ETT"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+<!--************************************************** Time Filter **************************************************-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/DT"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="FILTER BY DEPARTURE TIME"
+            android:textColor="@color/bpblack"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/FDT"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+<!--*************************************************** Filter Departure Time********************************************-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/DT"
+            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/fotter"
+            android:layout_marginBottom="3dp"
+            >
+<!--*************************************************Upper LayOut ************************************************************-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/upper"
+                >
+                <!--*************************************************First Time *************************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="100dp"
+                android:id="@+id/first"
+                android:layout_marginLeft="2dp"
+                android:background="@color/bpWhite"
+                android:onClick="First_Time"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/time_one"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/i1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="06:00 AM - 11:59 AM"
+                    android:id="@+id/first_text"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/i1"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_toRightOf="@+id/first"-->
+                <!--android:layout_marginLeft="2dp"-->
+                <!--android:background="@android:color/darker_gray"/>-->
+            <!--*************************************************Second Time *************************************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="100dp"
+                android:id="@+id/second"
+                android:layout_marginLeft="3dp"
+                android:background="@color/bpWhite"
+                android:layout_toRightOf="@+id/first"
+                android:onClick="Second_Time"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/time_two"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/i2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00 PM - 05:59 PM"
+                    android:id="@+id/second_text"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/i2"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+            </LinearLayout>
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_below="@+id/upper"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:background="@android:color/darker_gray"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:id="@+id/lower"
+                android:layout_below="@+id/upper"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                >
+
+                <!--*************************************************Third Time *********************************************-->
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="97dp"
+                android:id="@+id/third"
+                android:layout_marginLeft="3dp"
+                android:background="@color/bpWhite"
+                android:onClick="Third_Time"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/time_three"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/i3"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="06:00 PM - 11:59 PM"
+                    android:id="@+id/third_text"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/i3"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+
+            <!--*************************************************Fourth Time ************************************************************-->
+
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="97dp"
+                android:id="@+id/fourth"
+                android:layout_toRightOf="@+id/third"
+                android:layout_marginLeft="3dp"
+                android:background="@color/bpWhite"
+                android:onClick="Fourth_Time"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/time_four"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/i4"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00 AM - 05:59 AM"
+                    android:id="@+id/fourth_text"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/i4"
+                    android:textColor="@color/bpblack"
+                    />
+
+            </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/fotter"
+            android:onClick="Apply_Filter"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:textSize="@dimen/ampm_label_size"
+                android:textStyle="bold"
+                android:textColor="@color/bpWhite"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

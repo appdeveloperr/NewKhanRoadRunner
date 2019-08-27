@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p"
+        android:text="Personal Information"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PI"
+        android:padding="5dp"
+        android:layout_below="@+id/p"
+        android:background="@color/bpWhite"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        >
+
+<!--******************************** First Name***************-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name: "
+        android:textStyle="bold"
+        android:id="@+id/n"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Name"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="150dp"
+        android:hint="Name"
+        />
+
+    <!--******************************** Second Name***************-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name: "
+        android:textStyle="bold"
+        android:id="@+id/n1"
+        android:layout_below="@+id/Name"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Name1"
+        android:layout_below="@+id/Name"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="150dp"
+        android:hint="Name"
+        />
+
+    <!--******************************** User Cnic***************-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CNIC: "
+        android:textStyle="bold"
+        android:id="@+id/c"
+        android:layout_below="@+id/Name1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Cnic"
+        android:layout_below="@+id/Name1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="150dp"
+        android:hint="CNIC"
+        />
+
+    <!--******************************** User Mobile No***************-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No: "
+        android:textStyle="bold"
+        android:id="@+id/m"
+        android:layout_below="@+id/Cnic"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MobileNo"
+        android:layout_below="@+id/Cnic"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="150dp"
+        android:hint="Mobile No"
+        />
+
+    </RelativeLayout>
+<!--******************************* Change Password ********************-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/change"
+        android:layout_below="@+id/PI"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="Change Password"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change"
+        android:background="@color/bpWhite"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Previous Password"
+            android:textStyle="bold"
+            android:id="@+id/pre_p"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pre_p"
+            android:id="@+id/P_Password"
+            android:hint="Enter Previous Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter New Password "
+            android:textStyle="bold"
+            android:layout_below="@+id/P_Password"
+            android:id="@+id/new_p"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_p"
+            android:id="@+id/N_Password"
+            android:hint="Enter New Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/N_Password"
+            android:layout_alignParentRight="true"
+            android:text="Change Password"
+            android:textColor="@color/bpWhite"
+            android:padding="5dp"
+            android:onClick="Change_Password"
+            android:background="@color/darkcolor"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+    <!--***************************************************Fotter********************************************************-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fotter"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/Homelayout"
+            android:onClick="Home"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/Home"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/Home"
+                android:textColor="@color/colorAccent"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/MyBookinglayout"
+            android:layout_toEndOf="@+id/Homelayout"
+            android:onClick="My_Booking"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/MyBooking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/list"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Booking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/MyBooking"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:id="@+id/Helplayout"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/MyBookinglayout"
+            android:onClick="Help"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/Help"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/help"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/Help"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:id="@+id/Accountlayout"
+            android:layout_toEndOf="@+id/Helplayout"
+            android:layout_alignParentEnd="true"
+            android:onClick="My_Account"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/Account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/my_account"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Account"
+                android:id="@+id/MyAccountText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/Account"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--***************************************************Fotter********************************************************-->
+</RelativeLayout>

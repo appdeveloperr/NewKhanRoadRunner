@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/splash_image" />
+
+            <!--*************************First Name***************-->
+            <ImageView
+                android:id="@+id/name_I"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/person"
+                android:layout_below="@+id/logo"
+                />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_toEndOf="@+id/name_I"
+                android:layout_marginLeft="05dp"
+                >
+
+                <EditText
+                    android:id="@+id/First_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="First Name"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--*************************Last Name***************-->
+            <ImageView
+                android:id="@+id/name_I2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/person"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/name_I"
+                />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstName"
+                android:layout_toEndOf="@+id/name_I"
+                android:layout_marginLeft="05dp"
+                >
+
+                <EditText
+                    android:id="@+id/Last_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Last Name"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--********************************************** Email ********************************************-->
+            <ImageView
+                android:id="@+id/mai"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/name_I2"
+                android:src="@drawable/mail" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lastname"
+                android:layout_marginLeft="05dp"
+             android:layout_toEndOf="@+id/mai"
+
+                >
+
+                <EditText
+                    android:id="@+id/Mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Email Address*"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--********************************************* CNIC ************************************-->
+            <ImageView
+            android:id="@+id/imagenic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/mai"
+            android:src="@drawable/card"
+            android:layout_alignParentStart="true" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nic"
+                android:layout_marginLeft="05dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mai"
+                android:layout_toEndOf="@+id/imagenic"
+                >
+
+                <EditText
+                    android:id="@+id/idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="National Id Card*"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--*************************** Mobile Number *****************-->
+            <ImageView
+            android:id="@+id/imagemob"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:src="@drawable/mob"
+            android:layout_below="@+id/imagenic"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mob"
+                android:layout_marginLeft="05dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nic"
+                android:layout_toEndOf="@+id/imagemob"
+                >
+
+                <EditText
+                    android:id="@+id/mobi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:ems="10"
+                    android:hint="Mobile Number*"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--*************************** Date of Birth *****************-->
+            <ImageView
+                android:id="@+id/imagedob"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/dob"
+                android:layout_below="@+id/imagemob"
+                android:layout_alignEnd="@+id/imagemob"
+                android:layout_marginTop="10dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dob"
+                android:layout_marginLeft="05dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mob"
+                android:layout_toEndOf="@+id/imagedob"
+                >
+
+                <EditText
+                    android:id="@+id/dobT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Date of Birth*"
+                    android:textIsSelectable="true"
+                    android:onClick="DatePicker"
+                    android:inputType="none" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--*************************** Customer ID *****************-->
+            <ImageView
+                android:id="@+id/customerId"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/customer_id"
+                android:layout_below="@+id/imagedob"
+                android:layout_alignEnd="@+id/imagemob"
+                android:layout_marginTop="15dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/customerid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dob"
+                android:layout_marginLeft="05dp"
+                android:layout_toEndOf="@+id/customerId"
+                >
+
+                <EditText
+                    android:id="@+id/Customer_Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Customer Id*"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+<!--*************************** Passwoard *****************-->
+            <ImageView
+                android:id="@+id/password_I"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/password"
+                android:layout_below="@+id/customerId"
+                android:layout_alignEnd="@+id/imagemob"
+                android:layout_marginTop="5dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerid"
+                android:layout_marginLeft="05dp"
+                android:layout_toEndOf="@+id/customerId"
+                >
+
+                <EditText
+                    android:id="@+id/Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password*"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--***************************************** Address *************************************-->
+            <ImageView
+                android:id="@+id/address"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/address"
+                android:layout_below="@+id/password_I"
+                android:layout_alignEnd="@+id/imagemob"
+                android:layout_marginTop="5dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/address_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_I"
+                android:layout_marginLeft="05dp"
+                android:layout_toEndOf="@+id/customerId"
+                >
+
+                <EditText
+                    android:id="@+id/Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address*"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/address"
+                android:text="All Terms And Conditions are Applied"
+                android:textColor="#000" />
+
+            <Button
+                android:background="@drawable/ovalbutton"
+                android:layout_below="@+id/terms"
+                android:text="Submit"
+                android:onClick="Register"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
