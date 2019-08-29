@@ -22,4 +22,7 @@ public interface TerminalDao {
     @Query("SELECT * FROM Terminal")
     LiveData<List<Terminal>> getAllTerminal();
 
+    @Query("SELECT * FROM Terminal WHERE Terminal_id = :terminal")
+    Terminal getTerminalById(int terminal);
+
 }

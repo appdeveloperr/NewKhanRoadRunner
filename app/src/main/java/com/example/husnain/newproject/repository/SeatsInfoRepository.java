@@ -10,6 +10,7 @@ import com.example.husnain.newproject.dao.SeatsInfoDao;
 import com.example.husnain.newproject.dao.TicketingSeatDao;
 import com.example.husnain.newproject.database.ShujaDatabase;
 import com.example.husnain.newproject.entities.City;
+import com.example.husnain.newproject.entities.TicketingSchedule;
 import com.example.husnain.newproject.entities.TicketingSeat;
 
 import java.util.List;
@@ -25,6 +26,9 @@ public class SeatsInfoRepository {
     }
 
 
+    public List<SeatsInfo> getUnPushedData(){
+        return seatsInfoDao.getUnPushedData();
+    }
 
     public List<SeatsInfo> SelectSeatsInfoByStatus(String SeatStatus){
         return seatsInfoDao.SelectSeatsInfoByStatus(SeatStatus);
@@ -77,7 +81,7 @@ public class SeatsInfoRepository {
         protected Void doInBackground(SeatsInfo... seatsInfos) {
             //Dao.update(seatsInfos[0]);
 
-            Dao.updateSeatStatusBySeatNo(seatsInfos[0].getSeat_No(),seatsInfos[0].getSeat_status(), seatsInfos[0].getBookedBy());
+            Dao.updateSeatStatusBySeatNo(seatsInfos[0].getSeat_No(),seatsInfos[0].getSeat_status(), seatsInfos[0].getBookedBy(), seatsInfos[0].getIsPushed(),seatsInfos[0].getGender());
             return null;
         }
     }

@@ -91,7 +91,6 @@ public class SignUpActivity extends AppCompatActivity implements AsyncResponse{
                 }
             }
         });
-
     }
 
     public void DatePicker(View view)
@@ -99,7 +98,7 @@ public class SignUpActivity extends AppCompatActivity implements AsyncResponse{
         showDatePickerDialog();
     }
 
-    public void Register (View view)
+    public void Register(View view)
     {
         FName = FirstName.getText().toString().trim();
         LName = LastName.getText().toString().trim();

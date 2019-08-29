@@ -21,8 +21,9 @@ public class SeatsInfo implements Serializable{
     private float fare;
     private String Gender;
     private String BookedBy;
+    private boolean IsPushed;
 
-    public SeatsInfo(int seat_id, String seat_name, String seat_status, int Seat_No, float fare, String Gender, String BookedBy) {
+    public SeatsInfo(int seat_id, String seat_name, String seat_status, int Seat_No, float fare, String Gender, String BookedBy, boolean IsPushed) {
         this.seat_id = seat_id;
         this.seat_name = seat_name;
         this.seat_status = seat_status;
@@ -30,6 +31,15 @@ public class SeatsInfo implements Serializable{
         this.fare = fare;
         this.Gender = Gender;
         this.BookedBy = BookedBy;
+        this.IsPushed = IsPushed;
+    }
+
+    public boolean getIsPushed() {
+        return IsPushed;
+    }
+
+    public void setPushed(boolean pushed) {
+        IsPushed = pushed;
     }
 
     public void setId(int id) {

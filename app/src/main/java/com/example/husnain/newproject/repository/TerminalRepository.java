@@ -24,6 +24,10 @@ public class TerminalRepository {
         dao.deleteAllTerminal();
     }
 
+    public Terminal getTerminalById(int id){
+        return dao.getTerminalById(id);
+    }
+
     public void insert(Terminal obj){
         new InsertTerminalAsyncTask(dao).execute(obj);
     }

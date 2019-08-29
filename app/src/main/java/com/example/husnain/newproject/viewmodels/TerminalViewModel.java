@@ -24,6 +24,10 @@ public class TerminalViewModel extends AndroidViewModel {
         repository.deleteAll();
     }
 
+    public Terminal getTerminalById(int id){
+        return repository.getTerminalById(id);
+    }
+
     public void insert(Terminal obj){
         repository.insert(obj);
     }

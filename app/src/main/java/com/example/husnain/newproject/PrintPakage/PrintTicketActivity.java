@@ -129,6 +129,7 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
 
     String TicketingScheduleJSONOutupt = "";
     String TicketingSeatJSONOutupt = "";
+    String SeatsInfoJSONOutupt = "";
     private TicketingScheduleViewModel ticketingScheduleViewModel;
 
 
@@ -667,7 +668,7 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
                     }*/
 
                     ticketingSeatViewModel.insert(ticketingSeat);
-                    SeatsInfo seatsInfo = new SeatsInfo(SelectSeats.SelectedSeats.get(i).getSeat_id(),"","Reserved",SelectSeats.SelectedSeats.get(i).getSeat_No(),Float.parseFloat(btn_fare.getText().toString()), SelectSeats.SelectedSeats.get(i).getGender() ,Constants.SEAT_INS_TYPES.LOCAL);
+                    SeatsInfo seatsInfo = new SeatsInfo(SelectSeats.SelectedSeats.get(i).getSeat_id(),"","Reserved",SelectSeats.SelectedSeats.get(i).getSeat_No(),Float.parseFloat(btn_fare.getText().toString()), SelectSeats.SelectedSeats.get(i).getGender() ,Constants.SEAT_INS_TYPES.LOCAL, false);
                     seatsInfoViewModel.update(seatsInfo);
                     //}
 
@@ -720,6 +721,7 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
                 SaveTicketVolleyRequest(URL);
 
                 PushDataToServer();
+                //PushSeatsInfoDataToServer();
 
             } else {
                 Toast.makeText(this, "Internet is not connected. ", Toast.LENGTH_LONG).show();
@@ -875,6 +877,8 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
         }
     }
 
+
+
     public void PushDataToServer(){
         List<TicketingSchedule> ticketingSchedules = ticketingScheduleViewModel.getUnPushedData();
 
@@ -889,6 +893,28 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
         }
     }
 
+    public void PushSeatsInfoDataToServer(){
+        List<SeatsInfo> seatsInfos = seatsInfoViewModel.getUnPushedData();
+
+        if(seatsInfos.size()>0){
+            //ticketingSchedule = ticketingSchedules.get(0);
+            SeatsInfoJSONOutupt = BuildSeatsInfoJSONArray(seatsInfos);
+
+            Log.e("Seats Info",SeatsInfoJSONOutupt);
+            PostTicketingScheduleData(SeatsInfoJSONOutupt);
+        } else {
+            PushTicketingSeatDataToServer();
+        }
+    }
+
+    public String BuildTicketScheduleJSONArray(List<TicketingSchedule> list){
+        JSONArray jsonArray = new JSONArray();
+        for(int i = 0; i< list.size(); i++){
+            jsonArray.put(Utile.GenerateTicketScheduleJSONObject(list.get(i)));
+        }
+        return jsonArray.toString();
+    }
+
     private void PushTicketingSeatDataToServer(){
         List<TicketingSeat> ticketingSeats = ticketingSeatViewModel.getUnPushedData();
 
@@ -900,11 +926,11 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
         }
     }
 
-    public String BuildTicketScheduleJSONArray(List<TicketingSchedule> list){
+    public String BuildSeatsInfoJSONArray(List<SeatsInfo> list){
         JSONArray jsonArray = new JSONArray();
         for(int i = 0; i< list.size(); i++){
 
-            jsonArray.put(Utile.GenerateTicketScheduleJSONObject(list.get(i)));
+            jsonArray.put(Utile.GenerateSeatsInfoJSONObject(list.get(i)));
         }
         return jsonArray.toString();
     }

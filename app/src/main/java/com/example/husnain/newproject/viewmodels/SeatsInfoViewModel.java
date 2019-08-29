@@ -6,6 +6,7 @@ import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
 import com.example.husnain.newproject.SeatsInfo;
+import com.example.husnain.newproject.entities.TicketingSchedule;
 import com.example.husnain.newproject.entities.TicketingSeat;
 import com.example.husnain.newproject.repository.SeatsInfoRepository;
 import com.example.husnain.newproject.repository.TicketingSeatRepository;
@@ -20,6 +21,10 @@ public class SeatsInfoViewModel extends AndroidViewModel {
         super(application);
         repository = new SeatsInfoRepository(application);
         listLiveData = repository.getAllSeatsInfo();
+    }
+
+    public List<SeatsInfo> getUnPushedData(){
+        return repository.getUnPushedData();
     }
 
     public void insert(SeatsInfo obj){

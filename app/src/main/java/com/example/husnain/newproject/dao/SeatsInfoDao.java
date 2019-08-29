@@ -8,6 +8,7 @@ import android.arch.persistence.room.Update;
 
 import com.example.husnain.newproject.SeatsInfo;
 import com.example.husnain.newproject.entities.City;
+import com.example.husnain.newproject.entities.TicketingSchedule;
 import com.example.husnain.newproject.entities.TicketingSeat;
 
 import java.util.List;
@@ -30,10 +31,13 @@ public interface SeatsInfoDao {
     @Update
     void update(SeatsInfo seatsInfo);
 
-    @Query("Update Seats_Info set seat_status=:seat_status,BookedBy=:bookedby Where Seat_No=:seat_no")
-    void updateSeatStatusBySeatNo(int seat_no, String seat_status, String bookedby);
+    @Query("Update Seats_Info set seat_status=:seat_status,BookedBy=:bookedby, IsPushed=:ispushed, Gender=:gender Where Seat_No=:seat_no")
+    void updateSeatStatusBySeatNo(int seat_no, String seat_status, String bookedby, boolean ispushed, String gender);
 
     @Query("Select * From Seats_Info WHERE seat_status=:seat_status")
     List<SeatsInfo> SelectSeatsInfoByStatus(String seat_status);
+
+    @Query("SELECT * FROM Seats_Info WHERE  IsPushed = 0")
+    List<SeatsInfo> getUnPushedData();
 
 }

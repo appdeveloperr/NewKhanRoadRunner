@@ -323,7 +323,7 @@ public class SelectSeats extends AppCompatActivity implements AsyncResponse{
                     float busfare = this.fare;
                     //String Gender = "Male";
 
-                    SeatsInfo seatsInfo = new SeatsInfo(seat_id, seat_name, seat_status, Seat_No, busfare, Gender, Constants.SEAT_INS_TYPES.API);
+                    SeatsInfo seatsInfo = new SeatsInfo(seat_id, seat_name, seat_status, Seat_No, busfare, Gender, Constants.SEAT_INS_TYPES.API, true);
 
                     if( AppSession.getBoolean(Constants.SHARED_PREF.IS_INSERTED) && seatsInfoArrayList.size() > 0 && (!seatsInfoArrayList.get(count).getSeat_status().equals(seatsInfo.getSeat_status()))
                             && (seatsInfoArrayList.get(count).getBookedBy().equals(Constants.SEAT_INS_TYPES.API))){

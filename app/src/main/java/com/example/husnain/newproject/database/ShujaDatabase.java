@@ -37,7 +37,7 @@ import com.example.husnain.newproject.entities.*;
                         ScheduleDetail.class, ServerMapping.class, ServiceType.class,
                         ServiceTypeExtraFare.class, Terminal.class, TicketingSchedule.class,
                         TicketingSeat.class, Users.class, Vehicle.class, SeatsInfo.class
-                        }, version = 6)
+                        }, version = 7)
 
 public abstract class ShujaDatabase extends RoomDatabase {
     private static ShujaDatabase instance;

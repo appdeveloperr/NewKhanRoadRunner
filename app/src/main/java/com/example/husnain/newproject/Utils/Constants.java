@@ -80,6 +80,29 @@ public class Constants {
         public static final String SERVICETYPE_ID = "ServiceType_Id";
     }
 
+    public static class UPDATE_SEATS_INFO_COL {
+
+        public static final String OPERATOR_ID = "pOperator_Id";
+        public static final String BORDING_TERMINAL_ID = "pBordingTerminal_Id";
+        public static final String MASK_DATE = "pMaskDate";
+        public static final String MASK_ROUTE = "pMaskRoute";
+        public static final String MASK_TERMINAL_ID = "pMaskTerminalId";
+        public static final String MASK_DEP_TIME = "pMaskDepTime";
+        public static final String PASSENGER_CNIC = "pCNIC";
+        public static final String PASSENGER_NAME = "pPassenger_Name";
+        public static final String CONTACT_NO = "pContactNo";
+        public static final String INVOICE_ID = "Invoice_Id";
+        public static final String SEAT_ID = "pSeat_Id";
+        public static final String SEAT_NO = "pSeat_No";
+        public static final String GENDER = "pGender";
+        public static final String SOURCE_ID = "pSource_Id";
+        public static final String DESTINATION_ID = "pDestination_Id";
+        public static final String PASSENGER_FARE = "pFare";
+
+
+
+    }
+
     public static class TICKETING_SEAT_COL {
         public static final String TICKETING_SEAT_ID = "Ticketing_Seat_ID";
         public static final String TICKETING_SCHEDULE_ID = "Ticketing_Schedule_ID";

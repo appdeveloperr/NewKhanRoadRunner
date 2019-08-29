@@ -31,6 +31,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.husnain.newproject.Global;
+import com.example.husnain.newproject.PrintPakage.PrintTicketActivity;
+import com.example.husnain.newproject.SeatsInfo;
 import com.example.husnain.newproject.entities.TicketingSchedule;
 import com.example.husnain.newproject.entities.TicketingSeat;
 
@@ -389,6 +392,48 @@ public class Utile {
         catch(Exception e){
         }
         return s;
+    }
+
+    public static JSONObject GenerateSeatsInfoJSONObject(SeatsInfo seatsInfo){
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.OPERATOR_ID,
+                    Global.User_ID);
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.BORDING_TERMINAL_ID,
+                    30151 );
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.MASK_DATE,
+                    Global.VoucherDate);
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.MASK_ROUTE,
+                    Global.VoucherServiceTypeId );
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.MASK_TERMINAL_ID,
+                    30151);
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.MASK_DEP_TIME,
+                    Global.VoucherTime);
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.PASSENGER_CNIC,
+                    "00000-0000000-0");
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.PASSENGER_NAME,
+                    "OnTheWay");
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.CONTACT_NO,
+                    "0333-7777777");
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.INVOICE_ID,
+                    0);
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.SEAT_ID,
+                    seatsInfo.getSeat_id());
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.SEAT_NO,
+                    seatsInfo.getSeat_No());
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.GENDER,
+                    seatsInfo.getGender());
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.SOURCE_ID,
+                    PrintTicketActivity.Source.getCity_ID());
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.DESTINATION_ID,
+                    PrintTicketActivity.Destination.getCity_ID());
+            jsonObject.put(Constants.UPDATE_SEATS_INFO_COL.PASSENGER_FARE,
+                    seatsInfo.getFare());
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return jsonObject;
     }
 
     public static JSONObject GenerateTicketScheduleJSONObject(TicketingSchedule ticketingSchedule){

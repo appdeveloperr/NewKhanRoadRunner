@@ -1,6 +1,8 @@
 package com.example.husnain.newproject.activities;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,13 +13,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.SearchView;
 
+import com.example.husnain.newproject.Global;
 import com.example.husnain.newproject.R;
+import com.example.husnain.newproject.SelectSeats;
 import com.example.husnain.newproject.adapters.CityAdapter;
 import com.example.husnain.newproject.entities.City;
 import com.example.husnain.newproject.entities.InnerJoinRoute;
+import com.example.husnain.newproject.entities.Terminal;
 import com.example.husnain.newproject.viewmodels.RouteDetailViewModel;
+import com.example.husnain.newproject.viewmodels.TerminalViewModel;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class SelectCityActivity extends AppCompatActivity {
 
@@ -26,8 +33,10 @@ public class SelectCityActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private CityAdapter adapter;
 
-    private ArrayList<InnerJoinRoute> cities;
+    private ArrayList<InnerJoinRoute> cities = new ArrayList<InnerJoinRoute>();
     private RouteDetailViewModel routeDetailViewModel;
+    private TerminalViewModel terminalViewModel;
+
 
 
     @Override
@@ -40,6 +49,7 @@ public class SelectCityActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.rv_serch_city);
 
         routeDetailViewModel = ViewModelProviders.of(this).get(RouteDetailViewModel.class);
+        terminalViewModel = ViewModelProviders.of(this).get(TerminalViewModel.class);
 
 
 
@@ -51,8 +61,20 @@ public class SelectCityActivity extends AppCompatActivity {
 
 
 
-        cities = new ArrayList<InnerJoinRoute>(routeDetailViewModel.getRouteDetailsById(getIntent().getExtras().getInt("RouteId"))); ;
 
+        Terminal terminal = terminalViewModel.getTerminalById(  Integer.parseInt(removeLastChar( ("" + Global.VoucherNo), 9))); ;
+        ArrayList<InnerJoinRoute> innerJoinRoute = new ArrayList<InnerJoinRoute>(routeDetailViewModel.getRouteDetailsById(getIntent().getExtras().getInt("RouteId"))); ;
+
+        int SrNo = innerJoinRoute.size();
+
+        for (int count = 0; count < innerJoinRoute.size(); count++){
+            if(innerJoinRoute.get(count).getCity_ID() == terminal.getCity_ID()){
+                SrNo = innerJoinRoute.get(count).getSr_No();
+            }
+            if (innerJoinRoute.get(count).getSr_No() >= SrNo){
+                cities.add(innerJoinRoute.get(count));
+            }
+        }
 
         /*cities.add(new InnerJoinRoute(54, "Lahore لاہور","LHR",1));
         cities.add(new InnerJoinRoute(179, "Sargodha","Sargodha",2));
@@ -131,6 +153,13 @@ public class SelectCityActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+
+    public String removeLastChar(String s, int no_of_chars) {
+
+        return s.substring(0, s.length() - no_of_chars);
+
     }
 
 }
