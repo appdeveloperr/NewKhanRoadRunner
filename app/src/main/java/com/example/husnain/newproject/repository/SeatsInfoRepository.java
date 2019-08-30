@@ -1,17 +1,12 @@
 package com.example.husnain.newproject.repository;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 
 import com.example.husnain.newproject.SeatsInfo;
-import com.example.husnain.newproject.dao.CityDao;
 import com.example.husnain.newproject.dao.SeatsInfoDao;
-import com.example.husnain.newproject.dao.TicketingSeatDao;
 import com.example.husnain.newproject.database.ShujaDatabase;
-import com.example.husnain.newproject.entities.City;
-import com.example.husnain.newproject.entities.TicketingSchedule;
-import com.example.husnain.newproject.entities.TicketingSeat;
 
 import java.util.List;
 

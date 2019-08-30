@@ -1,15 +1,12 @@
 package com.example.husnain.newproject.viewmodels;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.annotation.NonNull;
 
 import com.example.husnain.newproject.SeatsInfo;
-import com.example.husnain.newproject.entities.TicketingSchedule;
-import com.example.husnain.newproject.entities.TicketingSeat;
 import com.example.husnain.newproject.repository.SeatsInfoRepository;
-import com.example.husnain.newproject.repository.TicketingSeatRepository;
 
 import java.util.List;
 

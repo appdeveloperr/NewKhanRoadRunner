@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/pass"
             android:layout_below="@+id/username"
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:ems="10"
                 android:hint="Server IP"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </RelativeLayout>

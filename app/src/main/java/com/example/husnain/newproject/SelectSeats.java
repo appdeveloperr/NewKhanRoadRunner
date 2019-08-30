@@ -1,22 +1,20 @@
 package com.example.husnain.newproject;
 
 import android.app.ProgressDialog;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,10 +24,7 @@ import com.example.husnain.newproject.Sessions.AppSession;
 import com.example.husnain.newproject.Utils.Constants;
 import com.example.husnain.newproject.Utils.Utile;
 import com.example.husnain.newproject.VolleyRequest.VolleyRequest;
-import com.example.husnain.newproject.entities.TicketingSeat;
-import com.example.husnain.newproject.viewmodels.ScheduleViewModel;
 import com.example.husnain.newproject.viewmodels.SeatsInfoViewModel;
-import com.example.husnain.newproject.viewmodels.TicketingSeatViewModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,7 +33,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

@@ -1,30 +1,25 @@
 package com.example.husnain.newproject.activities;
 
-import android.arch.lifecycle.ViewModelProviders;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.SearchView;
 
 import com.example.husnain.newproject.Global;
 import com.example.husnain.newproject.R;
-import com.example.husnain.newproject.SelectSeats;
 import com.example.husnain.newproject.adapters.CityAdapter;
-import com.example.husnain.newproject.entities.City;
 import com.example.husnain.newproject.entities.InnerJoinRoute;
 import com.example.husnain.newproject.entities.Terminal;
 import com.example.husnain.newproject.viewmodels.RouteDetailViewModel;
 import com.example.husnain.newproject.viewmodels.TerminalViewModel;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class SelectCityActivity extends AppCompatActivity {
 

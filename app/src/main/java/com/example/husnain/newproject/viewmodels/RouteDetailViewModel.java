@@ -1,16 +1,15 @@
 package com.example.husnain.newproject.viewmodels;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.annotation.NonNull;
 
 
 import com.example.husnain.newproject.entities.InnerJoinRoute;
 import com.example.husnain.newproject.entities.RouteDetail;
 import com.example.husnain.newproject.repository.RouteDetailRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RouteDetailViewModel extends AndroidViewModel {

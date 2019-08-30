@@ -1,8 +1,7 @@
 package com.example.husnain.newproject.activities;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -15,7 +14,6 @@ import com.example.husnain.newproject.Global;
 import com.example.husnain.newproject.R;
 import com.example.husnain.newproject.Sessions.AppSession;
 import com.example.husnain.newproject.Utils.Constants;
-import com.example.husnain.newproject.entities.Vehicle;
 
 public class InfoActivity extends AppCompatActivity {
 

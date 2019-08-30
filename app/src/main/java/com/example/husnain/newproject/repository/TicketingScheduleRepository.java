@@ -1,13 +1,11 @@
 package com.example.husnain.newproject.repository;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
-import android.content.Context;
+import androidx.lifecycle.LiveData;
+
 import android.os.AsyncTask;
 
 import com.example.husnain.newproject.Global;
-import com.example.husnain.newproject.Interfaces.AsyncResponse;
-import com.example.husnain.newproject.Interfaces.TicketingScheduleResponse;
 import com.example.husnain.newproject.dao.TicketingScheduleDao;
 import com.example.husnain.newproject.database.ShujaDatabase;
 import com.example.husnain.newproject.entities.TicketingSchedule;

@@ -37,7 +37,7 @@
                 />
 
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                     android:ems="10"
                     android:hint="First Name"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--*************************Last Name***************-->
             <ImageView
@@ -67,7 +67,7 @@
                 />
 
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/lastname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                     android:ems="10"
                     android:hint="Last Name"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--********************************************** Email ********************************************-->
             <ImageView
@@ -94,7 +94,7 @@
                 android:layout_below="@+id/name_I2"
                 android:src="@drawable/mail" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     android:ems="10"
                     android:hint="Email Address*"
                     android:inputType="textEmailAddress" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--********************************************* CNIC ************************************-->
             <ImageView
@@ -123,7 +123,7 @@
             android:src="@drawable/card"
             android:layout_alignParentStart="true" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nic"
                 android:layout_marginLeft="05dp"
                 android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                     android:ems="10"
                     android:hint="National Id Card*"
                     android:inputType="number" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--*************************** Mobile Number *****************-->
             <ImageView
@@ -152,7 +152,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="5dp" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/mob"
                 android:layout_marginLeft="05dp"
                 android:layout_width="match_parent"
@@ -169,7 +169,7 @@
                     android:ems="10"
                     android:hint="Mobile Number*"
                     android:inputType="phone" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--*************************** Date of Birth *****************-->
             <ImageView
@@ -181,7 +181,7 @@
                 android:layout_alignEnd="@+id/imagemob"
                 android:layout_marginTop="10dp" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dob"
                 android:layout_marginLeft="05dp"
                 android:layout_width="match_parent"
@@ -199,7 +199,7 @@
                     android:textIsSelectable="true"
                     android:onClick="DatePicker"
                     android:inputType="none" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--*************************** Customer ID *****************-->
             <ImageView
@@ -211,7 +211,7 @@
                 android:layout_alignEnd="@+id/imagemob"
                 android:layout_marginTop="15dp" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/customerid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -226,7 +226,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Customer Id*"
                     android:inputType="number" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 <!--*************************** Passwoard *****************-->
             <ImageView
@@ -238,7 +238,7 @@
                 android:layout_alignEnd="@+id/imagemob"
                 android:layout_marginTop="5dp" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_t"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Password*"
                     android:inputType="textPassword" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--***************************************** Address *************************************-->
             <ImageView
@@ -265,7 +265,7 @@
                 android:layout_alignEnd="@+id/imagemob"
                 android:layout_marginTop="5dp" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/address_t"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -280,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Address*"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <TextView

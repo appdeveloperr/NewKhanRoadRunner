@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "733625167846",
+    "firebase_url": "https://new-khan-road-runners.firebaseio.com",
+    "project_id": "new-khan-road-runners",
+    "storage_bucket": "new-khan-road-runners.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733625167846:android:e2d61607b3dd50b4",
+        "android_client_info": {
+          "package_name": "com.example.husnain.newproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733625167846-dneqqfov9gouj1sohuoigktlgje2f0l2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP1acxbfGeQtBVy6i4KQkKgvrDC34-Sqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733625167846-dneqqfov9gouj1sohuoigktlgje2f0l2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

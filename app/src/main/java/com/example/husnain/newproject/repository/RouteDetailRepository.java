@@ -1,7 +1,7 @@
 package com.example.husnain.newproject.repository;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 
 import com.example.husnain.newproject.dao.RouteDetailDao;
@@ -9,7 +9,6 @@ import com.example.husnain.newproject.database.ShujaDatabase;
 import com.example.husnain.newproject.entities.InnerJoinRoute;
 import com.example.husnain.newproject.entities.RouteDetail;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RouteDetailRepository {

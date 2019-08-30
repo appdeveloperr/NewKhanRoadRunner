@@ -2,46 +2,34 @@ package com.example.husnain.newproject;
 
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.location.LocationManager;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.example.husnain.newproject.Interfaces.AsyncResponse;
 import com.example.husnain.newproject.Sessions.AppSession;
 import com.example.husnain.newproject.Utils.Constants;
 import com.example.husnain.newproject.Utils.Utile;
-import com.example.husnain.newproject.VolleyRequest.VolleyRequest;
 import com.example.husnain.newproject.activities.DataSyncingActivity;
 import com.example.husnain.newproject.activities.MainDrawerActivity;
 import com.example.husnain.newproject.entities.Users;
 import com.example.husnain.newproject.viewmodels.UsersViewModel;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity{
 

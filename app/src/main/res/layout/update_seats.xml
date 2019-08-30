@@ -34,7 +34,7 @@
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             >
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_layout_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,9 +48,9 @@
                     android:inputType="text"
                     android:hint="Name" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_layout_cnic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                     android:inputType="number"
                     android:hint="CNIC (With Out -)" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
             
             <TextView
                 android:layout_width="wrap_content"
@@ -136,7 +136,7 @@
             >
 
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_layout_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -150,7 +150,7 @@
                     android:inputType="number"
                     android:hint="Phone (03XXXXXXXXX)" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
 <!--**************************************************************** Selected Seats ***********************************-->

@@ -2,7 +2,7 @@ package com.example.husnain.newproject.adapters;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.example.husnain.newproject.PrintPakage.PrintTicketActivity;
 import com.example.husnain.newproject.Utils.Constants;
-import com.example.husnain.newproject.activities.TicketingActivity;
-import com.example.husnain.newproject.entities.City;
 import com.example.husnain.newproject.R;
 import com.example.husnain.newproject.entities.InnerJoinRoute;
 

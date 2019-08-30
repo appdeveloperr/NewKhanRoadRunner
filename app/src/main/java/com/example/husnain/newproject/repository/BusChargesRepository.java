@@ -1,7 +1,7 @@
 package com.example.husnain.newproject.repository;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 
 import com.example.husnain.newproject.dao.BusChargesDao;

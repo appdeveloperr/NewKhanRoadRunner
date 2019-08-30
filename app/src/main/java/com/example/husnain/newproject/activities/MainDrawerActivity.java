@@ -1,10 +1,10 @@
 package com.example.husnain.newproject.activities;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,22 +14,22 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.StrictMode;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.telephony.gsm.GsmCellLocation;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import android.util.Log;
 import android.view.MenuItem;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -40,19 +40,13 @@ import com.example.husnain.newproject.Global;
 import com.example.husnain.newproject.Interfaces.AsyncResponse;
 import com.example.husnain.newproject.Interfaces.TicketingScheduleResponse;
 import com.example.husnain.newproject.PrintPakage.PrintTicketActivity;
-import com.example.husnain.newproject.PrintPakage.util.Util;
 import com.example.husnain.newproject.R;
 import com.example.husnain.newproject.Sessions.AppSession;
 import com.example.husnain.newproject.Utils.Constants;
 import com.example.husnain.newproject.Utils.Utile;
 import com.example.husnain.newproject.VolleyRequest.VolleyRequest;
-import com.example.husnain.newproject.dao.TicketingScheduleDao;
-import com.example.husnain.newproject.entities.FareDetails;
-import com.example.husnain.newproject.entities.InnerJoinRoute;
-import com.example.husnain.newproject.entities.Schedule;
 import com.example.husnain.newproject.entities.TicketingSchedule;
 import com.example.husnain.newproject.entities.TicketingSeat;
-import com.example.husnain.newproject.entities.Users;
 import com.example.husnain.newproject.entities.Vehicle;
 import com.example.husnain.newproject.viewmodels.ScheduleViewModel;
 import com.example.husnain.newproject.viewmodels.SeatsInfoViewModel;
@@ -67,12 +61,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 public class MainDrawerActivity extends AppCompatActivity
@@ -691,7 +679,7 @@ public class MainDrawerActivity extends AppCompatActivity
             Global.RouteName = scheduleViewModel.getScheduleByID(Global.VoucherScheduleId).getSchedule_Title();
             Vehicle vehicle = vehicleViewModel.getVehicleByID(Global.Vehicle_ID);
             Global.Vehicle_Name = vehicle.getVeh_Name();
-            Global.Vehicle_No = " \"" + vehicle.getRegistration_No() + "\"";
+            Global.Vehicle_No = "" + vehicle.getRegistration_No() ;
         } catch (Exception e){
             Utile.showAlertDialog("There is no schedule or vehicle against id",this).show();
         }

@@ -22,7 +22,7 @@
             android:layout_marginBottom="20dp"
             />
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -37,9 +37,9 @@
                 android:ems="10"
                 android:editable="false"
                 android:hint="@string/lbl_date_time" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -54,9 +54,9 @@
                 android:ems="10"
                 android:editable="false"
                 android:hint="@string/lbl_expense_type" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -71,9 +71,9 @@
                 android:ems="10"
                 android:editable="false"
                 android:hint="@string/lbl_select_station" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -89,9 +89,9 @@
                 android:gravity="top"
                 android:editable="false"
                 android:hint="@string/lbl_expense_description" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -106,7 +106,7 @@
                 android:ems="10"
                 android:editable="false"
                 android:hint="@string/lbl_expense_amount" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

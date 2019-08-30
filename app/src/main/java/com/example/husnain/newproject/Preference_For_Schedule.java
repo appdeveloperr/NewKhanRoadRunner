@@ -2,9 +2,9 @@ package com.example.husnain.newproject;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;

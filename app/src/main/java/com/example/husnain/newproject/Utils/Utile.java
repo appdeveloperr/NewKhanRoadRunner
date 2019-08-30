@@ -18,8 +18,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Environment;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.text.format.Formatter;
 import android.util.Base64;
@@ -287,7 +287,7 @@ public class Utile {
     }
 
     public static void dialogEnableLocation(String title, final Context context) {
-        final android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(context);
+        final androidx.appcompat.app.AlertDialog.Builder alertDialogBuilder = new androidx.appcompat.app.AlertDialog.Builder(context);
         alertDialogBuilder.setTitle((CharSequence) title);
         alertDialogBuilder.setMessage((CharSequence) "GPS or Network location is not enabled. Do you want to go to settings menu?");
         alertDialogBuilder.setPositiveButton((CharSequence) "Settings", (DialogInterface.OnClickListener) new DialogInterface.OnClickListener() {

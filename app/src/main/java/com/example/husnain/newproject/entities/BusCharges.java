@@ -1,9 +1,7 @@
 package com.example.husnain.newproject.entities;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-
-import java.math.BigInteger;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity (tableName = "Table_Bus_Charges")
 public class BusCharges {
