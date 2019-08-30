@@ -145,7 +145,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             img.setImageResource(R.drawable.black_seat);
         } else if (List.get(position*4).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView1;
-            if(List.get(position * 4 + 1).getGender().equals("Female")){
+            if(List.get(position * 4).getGender().equals("Female")){
                 img.setImageResource(R.drawable.ic_chair_female);
             } else {
                 img.setImageResource(R.drawable.red_seat);
@@ -177,7 +177,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             img.setImageResource(R.drawable.black_seat);
         } else if (List.get(position*4 + 2).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView3;
-            if(List.get(position * 4 + 1).getGender().equals("Female")){
+            if(List.get(position * 4 + 2).getGender().equals("Female")){
                 img.setImageResource(R.drawable.ic_chair_female);
             } else {
                 img.setImageResource(R.drawable.red_seat);
@@ -194,7 +194,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
         } else if (List.get(position*4 + 3).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView4;
             //img.setImageResource(R.drawable.red_seat);
-            if(List.get(position * 4 + 1).getGender().equals("Female")){
+            if(List.get(position * 4 + 3).getGender().equals("Female")){
                 img.setImageResource(R.drawable.ic_chair_female);
             } else {
                 img.setImageResource(R.drawable.red_seat);
@@ -214,7 +214,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             } else if (List.get(position * 4 + 4).getSeat_status().toString().trim().equals("Reserved")) {
                 img = holder.imageView5;
                 //img.setImageResource(R.drawable.red_seat);
-                if(List.get(position * 4 + 1).getGender().equals("Female")){
+                if(List.get(position * 4 + 4).getGender().equals("Female")){
                     img.setImageResource(R.drawable.ic_chair_female);
                 } else {
                     img.setImageResource(R.drawable.red_seat);
