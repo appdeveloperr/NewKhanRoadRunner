@@ -142,13 +142,13 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
 
         if (List.get(position*4).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position *4).getSeat_id())) {
             img = holder.imageView1;
-            img.setImageResource(R.drawable.black_seat);
+            img.setImageResource(R.drawable.ic_seat_free);
         } else if (List.get(position*4).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView1;
             if(List.get(position * 4).getGender().equals("Female")){
-                img.setImageResource(R.drawable.ic_pink_seat);
+                img.setImageResource(R.drawable.ic_seat_female_book);
             } else {
-                img.setImageResource(R.drawable.ic_blue_seat);
+                img.setImageResource(R.drawable.ic_seat_male_book);
             }
         } else if (SeatId.contains(List.get(position *4).getSeat_id()))
         {
@@ -156,32 +156,32 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             //img.setImageResource(R.drawable.green_seat);
             int index = SeatId.indexOf(List.get(position *4).getSeat_id());
             if(SelectedSeats.get(index).getGender().equals("Female")){
-                img.setImageResource(R.drawable.green_seat);
+                img.setImageResource(R.drawable.ic_seat_female);
             } else {
-                img.setImageResource(R.drawable.ic_dark_green_seat);
+                img.setImageResource(R.drawable.ic_seat_male);
             }
 
         }
 
         if (List.get(position * 4 + 1).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position *4 +1).getSeat_id())) {
             img = holder.imageView2;
-            img.setImageResource(R.drawable.black_seat);
+            img.setImageResource(R.drawable.ic_seat_free);
         } else if (List.get(position*4 + 1).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView2;
             if(List.get(position * 4 + 1).getGender().equals("Female")){
-                img.setImageResource(R.drawable.ic_pink_seat);
+                img.setImageResource(R.drawable.ic_seat_female_book);
             } else {
-                img.setImageResource(R.drawable.ic_blue_seat);
+                img.setImageResource(R.drawable.ic_seat_male_book);
             }
         } else if (SeatId.contains(List.get(position *4 +1).getSeat_id()))
         {
             img = holder.imageView2;
-            //img.setImageResource(R.drawable.green_seat);
+            //img.setImageResource(R.drawable.ic_seat_female);
             int index = SeatId.indexOf(List.get(position *4 +1).getSeat_id());
             if(SelectedSeats.get(index).getGender().equals("Female")){
-                img.setImageResource(R.drawable.green_seat);
+                img.setImageResource(R.drawable.ic_seat_female);
             } else {
-                img.setImageResource(R.drawable.ic_dark_green_seat);
+                img.setImageResource(R.drawable.ic_seat_male);
             }
         }
 
@@ -191,9 +191,9 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
         } else if (List.get(position*4 + 2).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView3;
             if(List.get(position * 4 + 2).getGender().equals("Female")){
-                img.setImageResource(R.drawable.ic_pink_seat);
+                img.setImageResource(R.drawable.ic_seat_female_book);
             } else {
-                img.setImageResource(R.drawable.ic_blue_seat);
+                img.setImageResource(R.drawable.ic_seat_male_book);
             }
         } else if (SeatId.contains(List.get(position *4 +2).getSeat_id()))
         {
@@ -201,9 +201,9 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             //img.setImageResource(R.drawable.green_seat);
             int index = SeatId.indexOf(List.get(position *4 +2).getSeat_id());
             if(SelectedSeats.get(index).getGender().equals("Female")){
-                img.setImageResource(R.drawable.green_seat);
+                img.setImageResource(R.drawable.ic_seat_female);
             } else {
-                img.setImageResource(R.drawable.ic_dark_green_seat);
+                img.setImageResource(R.drawable.ic_seat_male);
             }
         }
 
@@ -214,9 +214,9 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             img = holder.imageView4;
             //img.setImageResource(R.drawable.red_seat);
             if(List.get(position * 4 + 3).getGender().equals("Female")){
-                img.setImageResource(R.drawable.ic_pink_seat);
+                img.setImageResource(R.drawable.ic_seat_female_book);
             } else {
-                img.setImageResource(R.drawable.ic_blue_seat);
+                img.setImageResource(R.drawable.ic_seat_male_book);
             }
         } else if (SeatId.contains(List.get(position *4 +3).getSeat_id()))
         {
@@ -224,9 +224,9 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
             //img.setImageResource(R.drawable.green_seat);
             int index = SeatId.indexOf(List.get(position *4 +3).getSeat_id());
             if(SelectedSeats.get(index).getGender().equals("Female")){
-                img.setImageResource(R.drawable.green_seat);
+                img.setImageResource(R.drawable.ic_seat_female);
             } else {
-                img.setImageResource(R.drawable.ic_dark_green_seat);
+                img.setImageResource(R.drawable.ic_seat_male);
             }
         }
 
@@ -240,9 +240,9 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                 img = holder.imageView5;
                 //img.setImageResource(R.drawable.red_seat);
                 if(List.get(position * 4 + 4).getGender().equals("Female")){
-                    img.setImageResource(R.drawable.ic_pink_seat);
+                    img.setImageResource(R.drawable.ic_seat_female_book);
                 } else {
-                    img.setImageResource(R.drawable.ic_blue_seat);
+                    img.setImageResource(R.drawable.ic_seat_male_book);
                 }
             } else if (SeatId.contains(List.get(position * 4 + 4).getSeat_id()))
             {
@@ -250,9 +250,9 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                 //img.setImageResource(R.drawable.green_seat);
                 int index = SeatId.indexOf(List.get(position *4 +4).getSeat_id());
                 if(SelectedSeats.get(index).getGender().equals("Female")){
-                    img.setImageResource(R.drawable.green_seat);
+                    img.setImageResource(R.drawable.ic_seat_female);
                 } else {
-                    img.setImageResource(R.drawable.ic_dark_green_seat);
+                    img.setImageResource(R.drawable.ic_seat_male);
                 }
             }
         }
@@ -288,7 +288,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                     if(SeatId.contains(List.get(position*4).getSeat_id()))
                     {
                         if(gender.equals("female")){
-                            imageView.setImageResource(R.drawable.ic_chair_yellow);
+                            imageView.setImageResource(R.drawable.ic_seat_female);
                             SelectedSeats.get(SeatId.indexOf(List.get(position*4).getSeat_id())).setGender("Female");
                         } else if (gender.equals("none")){
                             imageView.setImageResource(R.drawable.black_seat);
@@ -308,7 +308,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                     else
                     {
 
-                        imageView.setImageResource(R.drawable.green_seat);
+                        imageView.setImageResource(R.drawable.ic_seat_male);
                         SeatId.add(List.get(position*4).getSeat_id());
                         /*SeatCount++;
                         PriceCount+=List.get(position*4).getFare();
@@ -351,7 +351,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                         PriceCounter.setText("Price: "+ SelectedSeats.size() * List.get(0).getFare());*/
 
                         if(gender.equals("female")){
-                            imageView.setImageResource(R.drawable.ic_chair_yellow);
+                            imageView.setImageResource(R.drawable.ic_seat_female);
                             SelectedSeats.get(SeatId.indexOf(List.get(position*4 +1).getSeat_id())).setGender("Female");
                         } else if (gender.equals("none")){
                             imageView.setImageResource(R.drawable.black_seat);
@@ -371,7 +371,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                     }
                     else
                     {
-                        imageView.setImageResource(R.drawable.green_seat);
+                        imageView.setImageResource(R.drawable.ic_seat_male);
                         SeatId.add(List.get(position*4 +1).getSeat_id());
                         /*SeatCount++;
                         PriceCount+=List.get(position*4 +1).getFare();
@@ -416,7 +416,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
 
 
                         if(gender.equals("female")){
-                            imageView.setImageResource(R.drawable.ic_chair_yellow);
+                            imageView.setImageResource(R.drawable.ic_seat_female);
                             SelectedSeats.get(SeatId.indexOf(List.get(position*4 +2).getSeat_id())).setGender("Female");
                         } else if (gender.equals("none")){
                             imageView.setImageResource(R.drawable.black_seat);
@@ -437,7 +437,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                     }
                     else
                     {
-                        imageView.setImageResource(R.drawable.green_seat);
+                        imageView.setImageResource(R.drawable.ic_seat_male);
                         SeatId.add(List.get(position*4 +2).getSeat_id());
                         /*SeatCount++;
                         PriceCount+=List.get(position*4 +2).getFare();
@@ -479,7 +479,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                         PriceCounter.setText("Price: "+ SelectedSeats.size() * List.get(0).getFare());*/
 
                         if(gender.equals("female")){
-                            imageView.setImageResource(R.drawable.ic_chair_yellow);
+                            imageView.setImageResource(R.drawable.ic_seat_female);
                             SelectedSeats.get(SeatId.indexOf(List.get(position*4 +3).getSeat_id())).setGender("Female");
                         } else if (gender.equals("none")){
                             imageView.setImageResource(R.drawable.black_seat);
@@ -499,7 +499,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                     }
                     else
                     {
-                        imageView.setImageResource(R.drawable.green_seat);
+                        imageView.setImageResource(R.drawable.ic_seat_male);
                         SeatId.add(List.get(position*4 +3).getSeat_id());
                         //SeatCount++;
                         //PriceCount+=List.get(position*4 +3).getFare();
@@ -542,7 +542,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                         SeatCounter.setText("Selected: "+ SelectedSeats.size());
                         PriceCounter.setText("Price: "+ SelectedSeats.size() * List.get(0).getFare());*/
                         if(gender.equals("female")){
-                            imageView.setImageResource(R.drawable.ic_chair_yellow);
+                            imageView.setImageResource(R.drawable.ic_seat_female);
                             SelectedSeats.get(SeatId.indexOf(List.get(position*4 +4).getSeat_id())).setGender("Female");
                         } else if (gender.equals("none")){
                             imageView.setImageResource(R.drawable.black_seat);
@@ -563,7 +563,7 @@ public class Seats_Addapter_45 extends RecyclerView.Adapter<Seats_Addapter_45.Vi
                     }
                     else
                     {
-                        imageView.setImageResource(R.drawable.green_seat);
+                        imageView.setImageResource(R.drawable.ic_seat_male);
                         SeatId.add(List.get(position*4 +4).getSeat_id());
                         //SeatCount++;
                         //PriceCount+=List.get(position*4 +3).getFare();
