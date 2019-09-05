@@ -28,8 +28,11 @@ public interface SeatsInfoDao {
     @Update
     void update(SeatsInfo seatsInfo);
 
-    @Query("Update Seats_Info set seat_status=:seat_status,BookedBy=:bookedby, IsPushed=:ispushed, Gender=:gender Where Seat_No=:seat_no")
-    void updateSeatStatusBySeatNo(int seat_no, String seat_status, String bookedby, boolean ispushed, String gender);
+    @Query("Update Seats_Info set seat_status=:seat_status,BookedBy=:bookedby, IsPushed=:ispushed, Gender=:gender, fare=:Fare Where Seat_No=:seat_no")
+    void updateSeatStatusBySeatNo(int seat_no, String seat_status, String bookedby, boolean ispushed, String gender,Float Fare);
+
+    @Query("Update Seats_Info set IsPushed=:ispushed Where Seat_No=:seat_no")
+    void updateSeatServerStatus(int seat_no,boolean ispushed);
 
     @Query("Select * From Seats_Info WHERE seat_status=:seat_status")
     List<SeatsInfo> SelectSeatsInfoByStatus(String seat_status);

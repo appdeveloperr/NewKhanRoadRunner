@@ -223,7 +223,7 @@ public class MainDrawerActivity extends AppCompatActivity
                 locationListener);
 
 
-        if(AppSession.getBoolean(Constants.SHARED_PREF.IS_VOUCHER_SCANNED)){
+        if( AppSession.getBoolean(Constants.SHARED_PREF.IS_VOUCHER_SCANNED)!=null && AppSession.getBoolean(Constants.SHARED_PREF.IS_VOUCHER_SCANNED)){
            SetGlobalValues();
         }
         //SetGlobalValues();

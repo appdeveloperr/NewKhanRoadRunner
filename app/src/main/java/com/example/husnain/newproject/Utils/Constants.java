@@ -23,6 +23,7 @@ public class Constants {
         public static final String GET_VEHICLE_LIST = "http://" + IP + "/api/APIMain.aspx?type=getVehiclesList";
         public static final String POST_TICKETING_SCHEDULE = "http://" + IP + "/webp/api/TicketShed/Create";
         public static final String POST_TICKETING_SEAT = "http://" + IP + "/webp/api/TicketSeat/Create";
+        public static final String POST_UPDATE_SEAT_STATUS = "http://" + IP + "/webp/api/MultipleSeat/Create";
         //public static final String POST_TICKETING_SCHEDULE = "http://34.237.245.32/webp/api/TicketShed/Create";
         //public static final String POST_TICKETING_SEAT = "http://34.237.245.32/webp/api/TicketSeat/Create";
 
@@ -31,6 +32,7 @@ public class Constants {
 
         public static final String GET_SEAT_BY_SCHEDULE_ID = "http://" + IP + "/api/APIMain.aspx?type=SeatsByScheduleId&pDate=";
         public static final String UPDATE_SEAT_STATUS = "http://" + IP + "/api/APIMain.aspx?type=UpdateSeatStatusSoldAll&pOperator_Id=" + Global.User_ID +"&pBordingTerminal_Id=30151&pMaskDate=" + Global.VoucherDate + "&pMaskRoute=" + Global.VoucherServiceTypeId + "&pMaskTerminalId=30151&pMaskDepTime="+ Global.VoucherTime +"&pCNIC=00000-0000000-0&pPassenger_Name=OnTheWay&pContactNo=0333-7777777&Invoice_Id=0&";
+
 
         //String url = "http://" + starting_url + ":999
     }
@@ -49,6 +51,7 @@ public class Constants {
 
         public static final String TAG_SCHEDULE = "ticketingSchedule";
         public static final String TAG_SEATS = "ticketingSeats";
+        public static final String TAG_UPDATE_SEAT_STATUS = "updateseatstatus";
 
         public static final String TAG_SOURCE = "source";
         public static final String TAG_DESTINATION = "dest";
@@ -82,22 +85,22 @@ public class Constants {
 
     public static class UPDATE_SEATS_INFO_COL {
 
-        public static final String OPERATOR_ID = "pOperator_Id";
-        public static final String BORDING_TERMINAL_ID = "pBordingTerminal_Id";
-        public static final String MASK_DATE = "pMaskDate";
-        public static final String MASK_ROUTE = "pMaskRoute";
-        public static final String MASK_TERMINAL_ID = "pMaskTerminalId";
-        public static final String MASK_DEP_TIME = "pMaskDepTime";
-        public static final String PASSENGER_CNIC = "pCNIC";
-        public static final String PASSENGER_NAME = "pPassenger_Name";
-        public static final String CONTACT_NO = "pContactNo";
-        public static final String INVOICE_ID = "Invoice_Id";
-        public static final String SEAT_ID = "pSeat_Id";
-        public static final String SEAT_NO = "pSeat_No";
-        public static final String GENDER = "pGender";
-        public static final String SOURCE_ID = "pSource_Id";
-        public static final String DESTINATION_ID = "pDestination_Id";
-        public static final String PASSENGER_FARE = "pFare";
+        public static final String OPERATOR_ID = "OperatorID";
+        public static final String BORDING_TERMINAL_ID = "BoardingTerminalID";
+        public static final String MASK_DATE = "MaskDate";
+        public static final String MASK_ROUTE = "MaskRoute";
+        public static final String MASK_TERMINAL_ID = "MaskTerminalId";
+        public static final String MASK_DEP_TIME = "MaskDepTime";
+        public static final String PASSENGER_CNIC = "CNIC";
+        public static final String PASSENGER_NAME = "PassengerName";
+        public static final String CONTACT_NO = "ContactNo";
+        public static final String INVOICE_ID = "InvoiceID";
+        public static final String SEAT_ID = "seat_id";
+        public static final String SEAT_NO = "Seat_No";
+        public static final String GENDER = "Gender";
+        public static final String SOURCE_ID = "SourceID";
+        public static final String DESTINATION_ID = "DestinationID";
+        public static final String PASSENGER_FARE = "fare";
 
 
 

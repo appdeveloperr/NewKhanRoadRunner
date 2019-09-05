@@ -44,8 +44,9 @@ public class VolleyRequest {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        delegate.onError(error.toString());
+
                         //progressDialog.dismiss();
+                        delegate.onError(error.toString());
                         Log.e("In Volley Error ",error.toString());
                     }
                 }) {
@@ -72,7 +73,8 @@ public class VolleyRequest {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        progressDialog.dismiss();
+                        if( progressDialog != null && progressDialog.isShowing())
+                            progressDialog.dismiss();
 //                        progressDialog.dismiss();
                         //Toast.makeText(Search_Activity.this, response, Toast.LENGTH_SHORT).show();
                         delegate.processFinish(response);
@@ -83,7 +85,8 @@ public class VolleyRequest {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //delegate.processFinish("Error");
-                        progressDialog.dismiss();
+                        if(progressDialog != null && progressDialog.isShowing())
+                            progressDialog.dismiss();
                         delegate.onError(error.toString());
                         //progressDialog.dismiss();
                         Log.e("In Volley Error ",error.toString());
@@ -107,21 +110,23 @@ public class VolleyRequest {
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please wait....");
-        progressDialog.setCancelable(false);
+        progressDialog.setCancelable(true);
         progressDialog.show();
         StringRequest stringRequest = new StringRequest(method, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(progressDialog.isShowing())
+                if(progressDialog != null && progressDialog.isShowing()){
                     progressDialog.dismiss();
+                }
                 delegate.processFinish(response);
                 Log.i("LOG_VOLLEY", response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                if(progressDialog.isShowing())
+                if(progressDialog != null && progressDialog.isShowing()){
                     progressDialog.dismiss();
+                }
                 delegate.onError(error.toString());
                 Log.e("LOG_VOLLEY", error.toString());
             }

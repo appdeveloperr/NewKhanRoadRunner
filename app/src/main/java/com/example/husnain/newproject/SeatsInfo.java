@@ -38,8 +38,8 @@ public class SeatsInfo implements Serializable{
         return IsPushed;
     }
 
-    public void setPushed(boolean pushed) {
-        IsPushed = pushed;
+    public void setIsPushed(boolean pushed) {
+        this.IsPushed = pushed;
     }
 
     public void setId(int id) {

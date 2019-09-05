@@ -32,6 +32,12 @@ public class SeatsInfoViewModel extends AndroidViewModel {
         repository.update(obj);
     }
 
+    public void updateIsPushed(SeatsInfo obj){
+        repository.updateIsPushed(obj);
+    }
+
+
+
     public List<SeatsInfo> SelectSeatsInfoByStatus(String Status){
         return repository.SelectSeatsInfoByStatus(Status);
     }
