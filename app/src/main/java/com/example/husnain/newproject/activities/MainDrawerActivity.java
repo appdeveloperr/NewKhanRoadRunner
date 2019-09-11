@@ -465,17 +465,22 @@ public class MainDrawerActivity extends AppCompatActivity
     }
 
     public void PushDataToServer(){
-        List<TicketingSchedule> ticketingSchedules = ticketingScheduleViewModel.getUnPushedData();
+        try{
+            List<TicketingSchedule> ticketingSchedules = ticketingScheduleViewModel.getUnPushedData();
 
-        if(ticketingSchedules.size()>0){
-            ticketingSchedule = ticketingSchedules.get(0);
-            TicketingScheduleJSONOutupt = BuildTicketScheduleJSONArray(ticketingSchedules);
+            if(ticketingSchedules.size()>0){
+                ticketingSchedule = ticketingSchedules.get(0);
+                TicketingScheduleJSONOutupt = BuildTicketScheduleJSONArray(ticketingSchedules);
 
-            Log.e("Ticketing Schedule",TicketingScheduleJSONOutupt);
-            PostTicketingScheduleData(TicketingScheduleJSONOutupt);
-        } else {
-            PushTicketingSeatDataToServer();
+                Log.e("Ticketing Schedule",TicketingScheduleJSONOutupt);
+                PostTicketingScheduleData(TicketingScheduleJSONOutupt);
+            } else {
+                PushTicketingSeatDataToServer();
+            }
+        } catch (Exception e){
+             Toast.makeText(this,"Something went wong during uploading data.", Toast.LENGTH_LONG).show();
         }
+
 
         /*ticketingScheduleViewModel.getUnPushedData().observe(this, new Observer<List<TicketingSchedule>>() {
             @Override
@@ -630,7 +635,7 @@ public class MainDrawerActivity extends AppCompatActivity
 
     public void extractAndSaveData(String result){
 
-        String[] str = (result.replace(" DEMO","")).split(","); //result.getContents().split(",");
+        String[] str = (result.replace(" DEMO","")).split("\\^"); //result.getContents().split(",");
         Global.Vehicle_ID = (int) Double.parseDouble(str[0]);
         Global.VoucherScheduleId = (int) Double.parseDouble(str[1]);
         Global.VoucherTime = str[2];
@@ -643,7 +648,6 @@ public class MainDrawerActivity extends AppCompatActivity
         String  VoucherDate = AppSession.get(Constants.SHARED_PREF.VOUCHER_DATE);
         String  VoucherTime = AppSession.get(Constants.SHARED_PREF.VOUCHER_TIME);
         int VoucherServiceTypeId = AppSession.getInt(Constants.SHARED_PREF.SERVICE_TYPE_ID);
-
 
         if( Global.Vehicle_ID != VehicleID ||
                 Global.VoucherScheduleId != ScheduleID ||

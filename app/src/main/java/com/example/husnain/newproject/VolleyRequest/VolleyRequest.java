@@ -1,8 +1,11 @@
 package com.example.husnain.newproject.VolleyRequest;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -73,11 +76,15 @@ public class VolleyRequest {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if( progressDialog != null && progressDialog.isShowing())
+                        if( progressDialog != null && progressDialog.isShowing()){
                             progressDialog.dismiss();
+                            progressDialog = null;
+                        }
+
 //                        progressDialog.dismiss();
                         //Toast.makeText(Search_Activity.this, response, Toast.LENGTH_SHORT).show();
                         delegate.processFinish(response);
+
                         Log.e("In Volley Request ",response);
                     }
                 },
@@ -85,8 +92,11 @@ public class VolleyRequest {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //delegate.processFinish("Error");
-                        if(progressDialog != null && progressDialog.isShowing())
+                        if(progressDialog != null && progressDialog.isShowing()){
                             progressDialog.dismiss();
+                            progressDialog = null;
+                        }
+
                         delegate.onError(error.toString());
                         //progressDialog.dismiss();
                         Log.e("In Volley Error ",error.toString());
@@ -108,7 +118,8 @@ public class VolleyRequest {
 
     public void jsonVolleyRequest(Context context, final String mRequestBody, int method, String URL){
 
-        progressDialog = new ProgressDialog(context);
+
+        progressDialog = new ProgressDialog(((AppCompatActivity) context));
         progressDialog.setMessage("Please wait....");
         progressDialog.setCancelable(true);
         progressDialog.show();
@@ -117,6 +128,7 @@ public class VolleyRequest {
             public void onResponse(String response) {
                 if(progressDialog != null && progressDialog.isShowing()){
                     progressDialog.dismiss();
+                    progressDialog = null;
                 }
                 delegate.processFinish(response);
                 Log.i("LOG_VOLLEY", response);
@@ -126,6 +138,7 @@ public class VolleyRequest {
             public void onErrorResponse(VolleyError error) {
                 if(progressDialog != null && progressDialog.isShowing()){
                     progressDialog.dismiss();
+                    progressDialog = null;
                 }
                 delegate.onError(error.toString());
                 Log.e("LOG_VOLLEY", error.toString());
