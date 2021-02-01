@@ -234,11 +234,10 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
         //et_date.setText(calendar.get(Calendar.DAY_OF_MONTH) + "/" + (calendar.get(Calendar.MONTH) + 1) + "/" + calendar.get(Calendar.YEAR)   );
 
         long miliss = System.currentTimeMillis();
-        date = DateUtil.timeMilisToString(miliss, "dd/mm/yyyy");
+//        date = DateUtil.timeMilisToString(miliss, "dd/mm/yyyy");
         time = DateUtil.timeMilisToString(miliss, "hh:mm:ss");
-        et_date.setText( calendar.get(Calendar.DAY_OF_MONTH) + "/" + (calendar.get(Calendar.MONTH) + 1 ) + "/"
-                + calendar.get(Calendar.YEAR)
-                + " " + time );
+        String date1 = DateUtil.dateToString(calendar.getTime(), "yyyy-MM-dd HH:mm:ss");
+        et_date.setText( date1 );
 
 
         ticketingSeatViewModel.getAll().observe(this, new Observer<List<TicketingSeat>>() {
@@ -360,6 +359,7 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
 
         //printNewLine();
         String thanks =  "\nPowered By: Logixity Soft " ;
+
         //String thanks2 =  "\nکو دینے کا شکریہ۔ وسلام " ;
 
         String StarsLine = "******************************";
@@ -417,6 +417,7 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
         //printNewLine();
         printText(VehicleNo);
         printText(thanks);
+        printText(Global.appVersion);
 
         //printStringBitmap(StringToBitMap(thanks,26));
         //printNewLine();
@@ -582,6 +583,9 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
         } else if(btn_fare.getText().toString().trim().equals("0.0")){
             Utile.DisplayLongToast(this,"Fare Cannot be Zero");
             return false;
+        }else if(Double.parseDouble(et_cash_received.getText().toString()) > Double.parseDouble(btn_total_amount.getText().toString())){
+            Utile.DisplayLongToast(this,"Error: Invalid Amount Received!");
+            return false;
         }
         else
             return true;
@@ -650,6 +654,7 @@ public class PrintTicketActivity extends AppCompatActivity implements AsyncRespo
                         Seat_IDs = Seat_IDs + "," + SelectSeats.SelectedSeats.get(i).getSeat_id();
                     }
 
+//                    TicketingSchedule prevRecord = ticketingScheduleViewModel.getPrevRecord(Global.VoucherScheduleId, Global.VoucherTime, Global.VoucherDate, Global.VoucherServiceTypeId, Global.VoucherNo);
                     TicketingSeat ticketingSeat = new TicketingSeat(Global.TicketingScheduleID,SelectSeats.SelectedSeats.get(i).getSeat_No(),0, et_date.getText().toString() ,
                             0,Global.User_ID, Source.getCity_ID(), Destination.getCity_ID(),"","",Double.parseDouble("" + SelectSeats.SelectedSeats.get(i).getFare()),
                             Double.isNaN(discount)? 0.0:discount,"",0,0,0,"",SelectSeats.SelectedSeats.get(i).getGender(),0,0,"",0,"",0,"","","",0,0,0,0,0,0,0,"","",0,Global.Lattitude,Global.Longitude,false);

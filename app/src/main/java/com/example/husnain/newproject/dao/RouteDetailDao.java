@@ -25,6 +25,7 @@ public interface RouteDetailDao {
     @Query("SELECT DISTINCT  Route_Detail.City_ID, City.City_Name, City.City_Abbr, Route_Detail.Sr_No\n" +
             "\tFROM Route_Detail INNER JOIN City \n" +
             "\t\tON Route_Detail.City_ID = City.City_ID\n" +
-            "\tWHERE Route_Detail.Route_ID = :routeId")
+            "\tWHERE Route_Detail.Route_ID = :routeId\n" +
+            "\tORDER BY Route_Detail.Sr_No")
     List<InnerJoinRoute> getRouteDetailsById(int routeId);
 }

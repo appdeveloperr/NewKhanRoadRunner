@@ -80,7 +80,8 @@ public class SeatsInfoRepository {
         protected Void doInBackground(SeatsInfo... seatsInfos) {
             //Dao.update(seatsInfos[0]);
 
-            Dao.updateSeatStatusBySeatNo(seatsInfos[0].getSeat_No(),seatsInfos[0].getSeat_status(), seatsInfos[0].getBookedBy(), seatsInfos[0].getIsPushed(),seatsInfos[0].getGender(),seatsInfos[0].getFare());
+            Dao.update(seatsInfos[0]);
+//            Dao.updateSeatStatusBySeatNo(seatsInfos[0].getSeat_No(),seatsInfos[0].getSeat_status(), seatsInfos[0].getBookedBy(), seatsInfos[0].getIsPushed(),seatsInfos[0].getGender(),seatsInfos[0].getFare());
             return null;
         }
     }

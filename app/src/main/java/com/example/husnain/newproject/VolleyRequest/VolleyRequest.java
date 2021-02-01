@@ -60,7 +60,7 @@ public class VolleyRequest {
             }
         };
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                10000,
+                1000 * 60 * 3,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
@@ -109,7 +109,8 @@ public class VolleyRequest {
             }
         };
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                10000,
+                1000 * 60 * 3,
+//                10000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
@@ -160,7 +161,8 @@ public class VolleyRequest {
             }
         };
 
-        int socketTimeout = 30000; // 30 seconds. You can change it
+        int socketTimeout = //30000; // 30 seconds. You can change it
+        1000 * 60 * 3;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                 0,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);

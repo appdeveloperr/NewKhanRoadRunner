@@ -21,7 +21,7 @@ public interface UsersDao {
     @Query("SELECT * FROM Users ")
     LiveData<List<Users>> getAllUsers();
 
-    @Query("SELECT * FROM Users WHERE User_Name = :username and Password = :pasw")
+    @Query("SELECT * FROM Users WHERE Upper(User_Name) = Upper(:username) and Password = :pasw")
     LiveData<List<Users>> validateUser(String username, String pasw);
 
 }

@@ -5,5 +5,5 @@ import com.example.husnain.newproject.entities.TicketingSchedule;
 
 public interface TicketingScheduleResponse {
 
-    void getSingleRowSucceded(TicketingSchedule output);
+    void getSingleRowSucceded(TicketingSchedule output, long ticketing_schedule_id);
 }

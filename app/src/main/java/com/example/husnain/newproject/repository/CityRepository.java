@@ -20,10 +20,13 @@ public class CityRepository {
         allCities = cityDao.getAllCities();
     }
 
+    public City getCityById(int cityId){
+        return this.cityDao.getCityById(cityId);
+    }
+
     public void insert(City city){
         new InsertCityAsyncTask(cityDao).execute(city);
     }
-
 
     public void deleteAll(){
         cityDao.deleteAllCities();

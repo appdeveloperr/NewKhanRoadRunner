@@ -20,6 +20,10 @@ public class CityViewModel extends AndroidViewModel {
         allCities = repository.getAllCities();
     }
 
+    public City getCityById(int cityId){
+        return this.repository.getCityById(cityId);
+    }
+
     public void insert(City city){
         repository.insert(city);
     }

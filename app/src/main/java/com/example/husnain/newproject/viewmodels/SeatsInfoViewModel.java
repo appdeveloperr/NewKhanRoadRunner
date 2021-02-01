@@ -48,9 +48,9 @@ public class SeatsInfoViewModel extends AndroidViewModel {
 
 
 
-    public LiveData<List<SeatsInfo>> getAll(){
-        return listLiveData;
-    }
+//    public LiveData<List<SeatsInfo>> getAll(){
+//        return listLiveData;
+//    }
 
 
     public List<SeatsInfo> getAllList(){

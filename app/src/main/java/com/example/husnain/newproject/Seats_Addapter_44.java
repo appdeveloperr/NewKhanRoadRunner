@@ -78,49 +78,49 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
         tv.setText("" + List.get(position*4 + 3).getSeat_No());
 
 
-        if (List.get(position*4).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position *4).getSeat_id())) {
+        if (List.get(position*4).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position *4).getSeat_No())) {
             img = holder.imageView1;
             img.setImageResource(R.drawable.black_seat);
         } else if (List.get(position*4).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView1;
             img.setImageResource(R.drawable.red_seat);
-        } else if (SeatId.contains(List.get(position *4).getSeat_id()))
+        } else if (SeatId.contains(List.get(position *4).getSeat_No()))
         {
             img = holder.imageView1;
             img.setImageResource(R.drawable.green_seat);
         }
 
-        if (List.get(position*4 + 1).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position*4 + 1).getSeat_id())) {
+        if (List.get(position*4 + 1).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position*4 + 1).getSeat_No())) {
             img = holder.imageView2;
             img.setImageResource(R.drawable.black_seat);
         } else if (List.get(position*4 + 1).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView2;
             img.setImageResource(R.drawable.red_seat);
-        } else if (SeatId.contains(List.get(position *4 + 1).getSeat_id()))
+        } else if (SeatId.contains(List.get(position *4 + 1).getSeat_No()))
         {
             img = holder.imageView2;
             img.setImageResource(R.drawable.green_seat);
         }
 
-        if (List.get(position*4 + 2).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position*4 + 2).getSeat_id())) {
+        if (List.get(position*4 + 2).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position*4 + 2).getSeat_No())) {
             img = holder.imageView3;
             img.setImageResource(R.drawable.black_seat);
         } else if (List.get(position*4 + 2).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView3;
             img.setImageResource(R.drawable.red_seat);
-        } else if (SeatId.contains(List.get(position *4 + 2).getSeat_id()))
+        } else if (SeatId.contains(List.get(position *4 + 2).getSeat_No()))
         {
             img = holder.imageView3;
             img.setImageResource(R.drawable.green_seat);
         }
 
-        if (List.get(position*4 + 3).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position *4).getSeat_id())) {
+        if (List.get(position*4 + 3).getSeat_status().equals("Empty") & !SeatId.contains(List.get(position *4).getSeat_No())) {
             img = holder.imageView4;
             img.setImageResource(R.drawable.black_seat);
         } else if (List.get(position*4 + 3).getSeat_status().toString().trim().equals("Reserved")) {
             img = holder.imageView4;
             img.setImageResource(R.drawable.red_seat);
-        } else if (SeatId.contains(List.get(position *4 + 3).getSeat_id()))
+        } else if (SeatId.contains(List.get(position *4 + 3).getSeat_No()))
         {
             img = holder.imageView1;
             img.setImageResource(R.drawable.green_seat);
@@ -135,10 +135,10 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                 {
                     ImageView imageView = holder.imageView1;
 
-                    if(SeatId.contains(List.get(position*4).getSeat_id()))
+                    if(SeatId.contains(List.get(position*4).getSeat_No()))
                     {
                         imageView.setImageResource(R.drawable.black_seat);
-                        SeatId.remove(SeatId.indexOf(List.get(position*4).getSeat_id()));
+                        SeatId.remove(SeatId.indexOf(List.get(position*4).getSeat_No()));
                         SeatCount--;
                         PriceCount-=List.get(position*4).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -150,7 +150,7 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                     else
                     {
                         imageView.setImageResource(R.drawable.green_seat);
-                        SeatId.add(List.get(position*4).getSeat_id());
+                        SeatId.add(List.get(position*4).getSeat_No());
                         SeatCount++;
                         PriceCount+=List.get(position*4).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -172,10 +172,10 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                 {
                     ImageView imageView = holder.imageView2;
 
-                    if(SeatId.contains(List.get(position*4 +1).getSeat_id()))
+                    if(SeatId.contains(List.get(position*4 +1).getSeat_No()))
                     {
                         imageView.setImageResource(R.drawable.black_seat);
-                        SeatId.remove(SeatId.indexOf(List.get(position*4 +1).getSeat_id()));
+                        SeatId.remove(SeatId.indexOf(List.get(position*4 +1).getSeat_No()));
                         SeatCount--;
                         PriceCount-=List.get(position*4 +1).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -188,7 +188,7 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                     else
                     {
                         imageView.setImageResource(R.drawable.green_seat);
-                        SeatId.add(List.get(position*4 +1).getSeat_id());
+                        SeatId.add(List.get(position*4 +1).getSeat_No());
                         SeatCount++;
                         PriceCount+=List.get(position*4 +1).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -210,10 +210,10 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                 {
                     ImageView imageView = holder.imageView3;
 
-                    if(SeatId.contains(List.get(position*4 +2).getSeat_id()))
+                    if(SeatId.contains(List.get(position*4 +2).getSeat_No()))
                     {
                         imageView.setImageResource(R.drawable.black_seat);
-                        SeatId.remove(SeatId.indexOf(List.get(position*4 +2).getSeat_id()));
+                        SeatId.remove(SeatId.indexOf(List.get(position*4 +2).getSeat_No()));
                         SeatCount--;
                         PriceCount-=List.get(position*4 +2).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -225,7 +225,7 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                     else
                     {
                         imageView.setImageResource(R.drawable.green_seat);
-                        SeatId.add(List.get(position*4 +2).getSeat_id());
+                        SeatId.add(List.get(position*4 +2).getSeat_No());
                         SeatCount++;
                         PriceCount+=List.get(position*4 +2).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -246,10 +246,10 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                 {
                     ImageView imageView = holder.imageView4;
 
-                    if(SeatId.contains(List.get(position*4 +3).getSeat_id()))
+                    if(SeatId.contains(List.get(position*4 +3).getSeat_No()))
                     {
                         imageView.setImageResource(R.drawable.black_seat);
-                        SeatId.remove(SeatId.indexOf(List.get(position*4 +3).getSeat_id()));
+                        SeatId.remove(SeatId.indexOf(List.get(position*4 +3).getSeat_No()));
                         SeatCount--;
                         PriceCount-=List.get(position*4 +3).getFare();
                         PriceCounter.setText("Price: "+PriceCount);
@@ -261,7 +261,7 @@ public class Seats_Addapter_44 extends RecyclerView.Adapter<Seats_Addapter_44.Vi
                     else
                     {
                         imageView.setImageResource(R.drawable.green_seat);
-                        SeatId.add(List.get(position*4 +3).getSeat_id());
+                        SeatId.add(List.get(position*4 +3).getSeat_No());
                         SeatCount++;
                         PriceCount+=List.get(position*4 +3).getFare();
                         PriceCounter.setText("Price: "+PriceCount);

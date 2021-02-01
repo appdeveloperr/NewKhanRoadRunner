@@ -37,4 +37,7 @@ public interface TicketingScheduleDao {
     @Query("SELECT * FROM Ticketing_Schedule WHERE Schedule_ID = :schedule_id AND Departure_Time = :dept_time AND TS_Date = :date AND ServiceType_Id = :srv_type_id AND Voucher_No = :voucher_no")
     TicketingSchedule getPrevRecord(int schedule_id, String dept_time,String date, int srv_type_id, long voucher_no);
 
+    @Query("SELECT * FROM Ticketing_Schedule WHERE Ticketing_Schedule_ID = :Ticketing_Schedule_ID")
+    TicketingSchedule getPrevRecord(long Ticketing_Schedule_ID);
+
 }

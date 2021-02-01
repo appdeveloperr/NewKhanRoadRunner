@@ -19,6 +19,9 @@ public interface CityDao {
     @Query("SELECT * FROM City")
     LiveData<List<City>> getAllCities();
 
+    @Query("SELECT * FROM City where City_Id = :cityId")
+    City getCityById(int cityId);
+
     @Query("DELETE FROM City")
     void deleteAllCities();
 

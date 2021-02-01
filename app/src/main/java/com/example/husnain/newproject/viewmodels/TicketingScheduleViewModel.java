@@ -52,4 +52,8 @@ public class TicketingScheduleViewModel extends AndroidViewModel {
     public TicketingSchedule getPrevRecord(int schedule_id, String dept_time,String date, int srv_type_id, long voucher_no){
         return repository.getPrevRecord(schedule_id, dept_time, date, srv_type_id, voucher_no);
     }
+
+    public TicketingSchedule getPrevRecord(long Ticketing_Schedule_ID){
+        return repository.getPrevRecord(Ticketing_Schedule_ID);
+    }
 }

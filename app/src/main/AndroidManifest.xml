@@ -9,22 +9,26 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
 
     <application
         android:name=".Global"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/ic_logo_newkhan"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
-        <activity android:name=".activities.InfoActivity"
-            android:screenOrientation="portrait"></activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.CashDetailActivity"></activity>
+        <activity
+            android:name=".activities.InfoActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.SystemConfigActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.SelectCityActivity" />
         <activity
             android:name=".activities.MainDrawerActivity"
@@ -35,8 +39,14 @@
             android:name=".activities.TicketingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.DataSyncingActivity"
-            android:screenOrientation="portrait"/> <!-- <activity android:name=".SplashActivity" android:theme="@style/Theme.Design.NoActionBar"> -->
+        <activity android:name=".activities.ScanCodeAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name=".activities.DataSyncingActivity"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".SplashActivity" android:theme="@style/Theme.Design.NoActionBar"> -->
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -60,24 +70,33 @@
             android:name=".SelectCity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name=".MyAccount"
+        <activity
+            android:name=".MyAccount"
             android:screenOrientation="portrait" />
-        <activity android:name=".MyBooking"
+        <activity
+            android:name=".MyBooking"
             android:screenOrientation="portrait" />
-        <activity android:name=".Help"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Schedule"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SelectSeats"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".UpdateSeats"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Preference_For_Schedule"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SignUpActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Schedule"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectSeats"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpdateSeats"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Preference_For_Schedule"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

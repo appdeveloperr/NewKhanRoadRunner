@@ -22,6 +22,7 @@ public class Constants {
         public static final String GET_FARE_LIST = "http://" + IP + "/api/APIMain.aspx?type=getFareList";
         public static final String GET_VEHICLE_LIST = "http://" + IP + "/api/APIMain.aspx?type=getVehiclesList";
         public static final String POST_TICKETING_SCHEDULE = "http://" + IP + "/webp/api/TicketShed/Create";
+        public static final String GET_TICKETING_SCHEDULE_EXISTING = "http://" + IP + "/API/APIMain.aspx?type=IsExistMobileScheduleId&pDate=%s&pDep_Time=%s&pSchedule_Id=%d&pVoucherNo=%d&ServiceType_Id=%d";
         public static final String POST_TICKETING_SEAT = "http://" + IP + "/webp/api/TicketSeat/Create";
         public static final String POST_UPDATE_SEAT_STATUS = "http://" + IP + "/webp/api/MultipleSeat/Create";
         //public static final String POST_TICKETING_SCHEDULE = "http://34.237.245.32/webp/api/TicketShed/Create";
@@ -158,6 +159,7 @@ public class Constants {
         public static final String IS_INSERTED = "is_inserted";
         public static final String EXTRA_SEATS = "extra_seats";
         public static final String SCHEDULE_ID = "schedule_id";
+        public static final String TICKETING_SCHEDULE_ID = "ticketing_schedule_id";
         public static final String VOUCHER_NO = "voucher_no";
         public static final String VEHICLE_ID = "vehicle_id";
         public static final String VOUCHER_TIME = "v_time";

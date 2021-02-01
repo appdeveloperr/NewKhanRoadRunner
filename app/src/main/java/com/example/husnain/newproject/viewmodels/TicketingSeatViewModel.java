@@ -36,7 +36,16 @@ public class TicketingSeatViewModel extends AndroidViewModel {
         return listLiveData;
     }
 
+    public List<TicketingSeat> getMyTickets(int userId){
+        return this.repository.getMyTickets(userId);
+    }
+
+
     public List<TicketingSeat> getUnPushedData(){
         return repository.getUnPushedData();
+    }
+
+    public void setPrinted(List<Integer> ids) {
+        this.repository.setPrinted(ids);
     }
 }

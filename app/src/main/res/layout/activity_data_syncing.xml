@@ -4,101 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.DataSyncingActivity"
     android:fillViewport="true"
-    >
+    android:isScrollContainer="true"
+    android:orientation="horizontal"
+    tools:context=".activities.DataSyncingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-    <Button
-        android:id="@+id/btnGetCities"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Cities"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right">
 
-    <Button
-        android:id="@+id/btnGetServiceTypes"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Services Types"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        <Button
+            android:id="@+id/btnGetCities"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Cities"
+            android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/btnGetTerminals"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Terminals"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        <Button
+            android:id="@+id/btnGetServiceTypes"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Services Types"
+            android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/btnGetRouteAll"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Routes"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        <Button
+            android:id="@+id/btnGetTerminals"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Terminals"
+            android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/btnGetRouteAllDetail"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Routes Detail"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        <Button
+            android:id="@+id/btnGetRouteAll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Routes"
+            android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/btnGetScheduleAll"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Schedules"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        <Button
+            android:id="@+id/btnGetRouteAllDetail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Routes Detail"
+            android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/btnGetScheduleAllDetail"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Schedules Detail"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
-    <Button
-        android:id="@+id/btnGetUsers"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Users"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
-    <Button
-        android:id="@+id/btnGetFareDetail"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Get Fare Detail"
-        android:textColor="@android:color/white"
-        android:onClick="SyncingClicks"/>
+        <Button
+            android:id="@+id/btnGetScheduleAll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Schedules"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnGetScheduleAllDetail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Schedules Detail"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnGetUsers"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Users"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnGetFareDetail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
+            android:text="Get Fare Detail"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/btnGetVehicles"
@@ -106,9 +113,9 @@
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@color/colorPrimaryDark"
+            android:onClick="SyncingClicks"
             android:text="Get Vehicles"
-            android:textColor="@android:color/white"
-            android:onClick="SyncingClicks"/>
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

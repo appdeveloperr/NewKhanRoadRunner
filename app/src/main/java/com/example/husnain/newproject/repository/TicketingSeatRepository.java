@@ -43,6 +43,14 @@ public class TicketingSeatRepository {
         return dao.getUnPushedData();
     }
 
+    public List<TicketingSeat> getMyTickets(int userId){
+        return this.dao.getMyTickets(userId);
+    }
+
+    public void setPrinted(List<Integer> ids) {
+        this.dao.setPrinted(ids);
+    }
+
     private static class InsertTicketingSeatAsyncTask extends AsyncTask<TicketingSeat, Void ,Void>{
         private TicketingSeatDao Dao;
 

@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 
 import com.example.husnain.newproject.Global;
+import com.example.husnain.newproject.Sessions.AppSession;
+import com.example.husnain.newproject.Utils.Constants;
 import com.example.husnain.newproject.dao.TicketingScheduleDao;
 import com.example.husnain.newproject.database.ShujaDatabase;
 import com.example.husnain.newproject.entities.TicketingSchedule;
@@ -55,6 +57,10 @@ public class TicketingScheduleRepository {
         return dao.getPrevRecord(schedule_id, dept_time, date, srv_type_id, voucher_no);
     }
 
+    public TicketingSchedule getPrevRecord(long Ticketing_Schedule_ID){
+        return dao.getPrevRecord(Ticketing_Schedule_ID);
+    }
+
     private static class InsertTicketingScheduleAsyncTask extends AsyncTask<TicketingSchedule, Void ,Long>{
         private TicketingScheduleDao Dao;
 
@@ -64,12 +70,15 @@ public class TicketingScheduleRepository {
 
         @Override
         protected Long doInBackground(TicketingSchedule... objToAdd) {
-            return Dao.insert(objToAdd[0]);
+//            objToAdd[0].setTicketing_Schedule_ID(System.currentTimeMillis());
+            Dao.insert(objToAdd[0]);
+            return objToAdd[0].getTicketing_Schedule_ID();
         }
 
         @Override
         protected void onPostExecute(Long ticketingScheduleId) {
             Global.TicketingScheduleID = ticketingScheduleId;
+            AppSession.put(Constants.SHARED_PREF.TICKETING_SCHEDULE_ID, Global.TicketingScheduleID);
         }
     }
 

@@ -8,8 +8,8 @@ import java.io.Serializable;
 @Entity(tableName = "Ticketing_Schedule")
 public class TicketingSchedule implements Serializable {
 
-    @PrimaryKey(autoGenerate = true)
-    private int Ticketing_Schedule_ID;
+    @PrimaryKey
+    private long Ticketing_Schedule_ID;
     private int Sr_No;
     private String TS_Date;
     private int Schedule_ID;
@@ -68,11 +68,11 @@ public class TicketingSchedule implements Serializable {
         IsPushed = pushed;
     }
 
-    public void setTicketing_Schedule_ID(int ticketing_Schedule_ID) {
+    public void setTicketing_Schedule_ID(long ticketing_Schedule_ID) {
         this.Ticketing_Schedule_ID = ticketing_Schedule_ID;
     }
 
-    public int getTicketing_Schedule_ID() {
+    public long getTicketing_Schedule_ID() {
         return Ticketing_Schedule_ID;
     }
 

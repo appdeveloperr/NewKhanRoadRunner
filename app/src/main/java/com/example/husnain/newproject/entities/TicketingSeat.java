@@ -50,6 +50,7 @@ public class TicketingSeat implements Serializable {
     private Double Latitude; //null
     private Double Longitude; //null
     private boolean IsPushed;
+    private boolean printed;
 //
     public TicketingSeat(long Ticketing_Schedule_ID, int Seat_No, int Status, String Issue_Date, int Issue_Terminal, int Issued_By, int Source_ID, int Destination_ID, String Passenger_Name, String Contact_No, double Fare, double Discount, String Ticket_Sr_No, int Is_bookedSold, int Booked_User, int Is_SMS_Sent, String CNIC, String Gender, int Is_Transit, int Shift_User_Id, String PNR_No, int Telenor, String PaymentDate, int IsMissed, String ChangeTicket_No, String CollectionPoint, String ChangeType, int Route_Sr_No, int Operator_Id, int Customer_Id, int Points, int Is_OnlinePrinted, int OnlinePrinter_UserId, int OnlinePrint_Terminal_Id, String OnlinePrint_Date, String Invoice_Id, int Is_Online, Double Latitude, Double Longitude, boolean IsPushed) {
         this.Ticketing_Schedule_ID = Ticketing_Schedule_ID;
@@ -92,6 +93,22 @@ public class TicketingSeat implements Serializable {
         this.Latitude = Latitude;
         this.Longitude = Longitude;
         this.IsPushed = IsPushed;
+    }
+
+    public TicketingSeat(int seat_No, String passenger_Name, double fare, int source_ID, int destination_ID) {
+        Seat_No = seat_No;
+        Passenger_Name = passenger_Name;
+        Fare = fare;
+        this.Source_ID = source_ID;
+        this.Destination_ID = destination_ID;
+    }
+
+    public boolean isPrinted() {
+        return printed;
+    }
+
+    public void setPrinted(boolean printed) {
+        this.printed = printed;
     }
 
     public boolean getIsPushed() {

@@ -31,6 +31,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.husnain.newproject.BuildConfig;
 import com.example.husnain.newproject.Global;
 import com.example.husnain.newproject.PrintPakage.PrintTicketActivity;
 import com.example.husnain.newproject.SeatsInfo;
@@ -379,19 +380,20 @@ public class Utile {
 
     public static String Fromatmdytoymd(String s)
     {
-        try{
-            final String OLD_FORMAT="MM/dd/yyyy";
-            final String NEW_FORMAT="yyyy/MM/dd";
-            String oldDateString = s;
-            //String newDateString;
-            SimpleDateFormat sdf=new SimpleDateFormat(OLD_FORMAT);
-            Date d= sdf.parse(oldDateString);
-            sdf.applyPattern(NEW_FORMAT);
-            s=sdf.format(d);
-        }
-        catch(Exception e){
-        }
-        return s;
+        return s.split(" ")[0].trim();
+//        try{
+//            final String OLD_FORMAT="yyyy/MM/dd hh:mm a";
+//            final String NEW_FORMAT="yyyy/MM/dd";
+//            String oldDateString = s;
+//            //String newDateString;
+//            SimpleDateFormat sdf=new SimpleDateFormat(OLD_FORMAT);
+//            Date d= sdf.parse(oldDateString);
+//            sdf.applyPattern(NEW_FORMAT);
+//            s=sdf.format(d);
+//        }
+//        catch(Exception e){
+//        }
+//        return s;
     }
 
     public static JSONObject GenerateSeatsInfoJSONObject(SeatsInfo seatsInfo){
@@ -480,7 +482,7 @@ public class Utile {
             jsonObject.put(Constants.TICKETING_SCHEDULE_COL.IS_CLOSED,
                     ticketingSchedule.getIs_Closed());
             jsonObject.put(Constants.TICKETING_SCHEDULE_COL.BOOK_ID,
-                    ticketingSchedule.getBook_Id());
+                    BuildConfig.VERSION_CODE);
             jsonObject.put(Constants.TICKETING_SCHEDULE_COL.IS_PULLED,
                     ticketingSchedule.getIs_Pulled());
             jsonObject.put(Constants.TICKETING_SCHEDULE_COL.SERVICETYPE_ID,

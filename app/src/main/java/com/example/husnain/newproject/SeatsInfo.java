@@ -11,12 +11,12 @@ import java.io.Serializable;
 @Entity(tableName = "Seats_Info")
 public class SeatsInfo implements Serializable{
 
-    @PrimaryKey(autoGenerate = true)
-    private int id;
+//    private int id;
 
     private int seat_id;
     private String seat_name;
     private String seat_status;
+    @PrimaryKey()
     private int Seat_No;
     private float fare;
     private String Gender;
@@ -42,13 +42,13 @@ public class SeatsInfo implements Serializable{
         this.IsPushed = pushed;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+//
+//    public int getId() {
+//        return id;
+//    }
 
     public String getBookedBy() {
         return BookedBy;

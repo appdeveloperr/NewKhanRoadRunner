@@ -9,6 +9,7 @@ import android.app.Application;
 public class Global extends Application {
 
     public static int Vehicle_ID = 0;
+    public static String MY_PREFS_NAME = "MyPrefsFile";
 
     public static int User_ID = 0;
     public static String User_Name = "";
@@ -24,6 +25,7 @@ public class Global extends Application {
     public static String Vehicle_Name = "";
     public static boolean IsSuperAdmin = false;
     public static boolean IsAdmin = false;
+    public static String appVersion = "ver: 1.3.6";
 
 
     public static double Lattitude = 0.0;
